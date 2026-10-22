@@ -39,18 +39,7 @@ teflow select --config /data/te_project/my_plant_01.local.json \
 | I | HiTE | Optional comparison with bundled homology resources/models |
 | R | User-supplied reference library | Fixed-library remapping/control |
 
-```mermaid
-flowchart LR
-    G[Genome; optional gene annotation] --> D[Published discovery/refinement tools]
-    D --> L[Separate libraries and provenance]
-    L --> Q[QC evidence]
-    L --> R[Uniform RepeatMasker]
-    G --> T[TRF and DUST tracks]
-    R --> X[Per-branch BED/GFF3 and softmasked FASTA]
-    T --> X
-    Q --> X
-    X --> S[Explicit choice for downstream delivery]
-```
+![TEflow workflow: genome input feeds published discovery and refinement tools, producing separate libraries with provenance. Libraries feed QC and uniform RepeatMasker annotation; TRF and DUST tracks join these in per-branch outputs, followed by explicit user selection for downstream delivery.](docs/images/workflow.svg)
 
 Combining libraries folds full-length exact or reverse-complement aliases within the same class. It does not infer approximate TE families or automatically choose the best library. Fragment alignments are not complete insertions. Classified-TE, tandem-repeat and DUST masks are combined for the primary softmasked FASTA; Unknown intervals remain separate unless an additional inclusive mask was explicitly requested. See the [results guide](docs/RESULTS_GUIDE.md).
 

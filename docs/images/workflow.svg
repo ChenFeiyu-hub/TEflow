@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="656" viewBox="0 0 900 656" role="img" aria-labelledby="title description">
+  <title id="title">TEflow annotation workflow</title>
+  <desc id="description">Genome input, with optional gene annotation, feeds published discovery and refinement tools, which produce separate libraries with provenance. Libraries feed QC evidence and uniform RepeatMasker annotation. Genome input also feeds TRF and DUST tracks. QC evidence, RepeatMasker annotation and repeat tracks join in per-branch BED, GFF3 and softmasked FASTA outputs. The user explicitly selects a branch for downstream delivery.</desc>
+  <!-- Native SVG text and explicit lines keep labels independent of Mermaid/HTML layout. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="898" height="654" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <!-- Edges: genome -> discovery -> libraries; libraries -> QC / RepeatMasker;
+       genome -> tracks; all three evidence routes -> outputs -> user selection. -->
+  <g fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 282 80 H 323" marker-end="url(#arrow)"/>
+    <path d="M 575 80 H 616" marker-end="url(#arrow)"/>
+    <path d="M 157 128 V 206" marker-end="url(#arrow)"/>
+    <path d="M 743 128 V 206" marker-end="url(#arrow)"/>
+    <path d="M 743 164 H 450 V 206" marker-end="url(#arrow)"/>
+    <path d="M 157 304 V 348 H 450"/>
+    <path d="M 743 304 V 348 H 450"/>
+    <path d="M 450 304 V 390" marker-end="url(#arrow)"/>
+    <path d="M 450 488 V 542" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="#64748b">
+    <circle cx="743" cy="164" r="3"/>
+    <circle cx="450" cy="348" r="3"/>
+  </g>
+
+  <g font-family="Arial, Liberation Sans, sans-serif" text-anchor="middle" fill="#172b4d">
+    <!-- Input and library discovery. All text has explicit coordinates and generous padding. -->
+    <g>
+      <rect x="32" y="32" width="250" height="96" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="157" y="75" font-size="20" font-weight="600">Genome</text>
+      <text x="157" y="103" font-size="17" fill="#475569">Optional gene annotation</text>
+    </g>
+    <g>
+      <rect x="325" y="32" width="250" height="96" rx="12" fill="#eef2ff" stroke="#818cf8" stroke-width="1.5"/>
+      <text x="450" y="75" font-size="20" font-weight="600">Published tools</text>
+      <text x="450" y="103" font-size="17" fill="#475569">Discovery and refinement</text>
+    </g>
+    <g>
+      <rect x="618" y="32" width="250" height="96" rx="12" fill="#eef2ff" stroke="#818cf8" stroke-width="1.5"/>
+      <text x="743" y="75" font-size="20" font-weight="600">Separate libraries</text>
+      <text x="743" y="103" font-size="17" fill="#475569">With provenance</text>
+    </g>
+
+    <!-- Supporting tracks, quality evidence and consistent per-library remapping. -->
+    <g>
+      <rect x="32" y="208" width="250" height="96" rx="12" fill="#f0fdfa" stroke="#2a9d8f" stroke-width="1.5"/>
+      <text x="157" y="251" font-size="20" font-weight="600">TRF and DUST tracks</text>
+      <text x="157" y="279" font-size="17" fill="#475569">Tandem / low-complexity</text>
+    </g>
+    <g>
+      <rect x="325" y="208" width="250" height="96" rx="12" fill="#fffbeb" stroke="#c99b34" stroke-width="1.5"/>
+      <text x="450" y="251" font-size="20" font-weight="600">QC evidence</text>
+      <text x="450" y="279" font-size="17" fill="#475569">Evidence for review</text>
+    </g>
+    <g>
+      <rect x="618" y="208" width="250" height="96" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="743" y="251" font-size="20" font-weight="600">Uniform RepeatMasker</text>
+      <text x="743" y="279" font-size="17" fill="#475569">Per-library annotation</text>
+    </g>
+
+    <!-- Separate deliverables stay separate until an explicit user choice. -->
+    <g>
+      <rect x="200" y="392" width="500" height="96" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="450" y="435" font-size="21" font-weight="600">Per-branch outputs</text>
+      <text x="450" y="463" font-size="18" fill="#475569">BED / GFF3 + softmasked FASTA</text>
+    </g>
+    <g>
+      <rect x="250" y="544" width="400" height="80" rx="12" fill="#173c5b" stroke="#173c5b" stroke-width="1.5"/>
+      <text x="450" y="578" font-size="21" font-weight="600" fill="#ffffff">Explicit user selection</text>
+      <text x="450" y="606" font-size="18" fill="#e2e8f0">Downstream delivery</text>
+    </g>
+  </g>
+</svg>

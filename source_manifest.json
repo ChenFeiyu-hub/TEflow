@@ -34,7 +34,7 @@
       "bytes": 448
     },
     "README.md": {
-      "bytes": 6404
+      "bytes": 6345
     },
     "docs/ARCHITECTURE_REVIEW.md": {
       "bytes": 5130
@@ -191,6 +191,9 @@
     },
     "docs/VALIDATION_2026-09-28.md": {
       "bytes": 4263
+    },
+    "docs/images/workflow.svg": {
+      "bytes": 4702
     },
     "docs/validation/actual_evidence_v0.2.2.json": {
       "bytes": 1535
