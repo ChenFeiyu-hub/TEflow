@@ -9,6 +9,11 @@ Current 1.0 instructions:
 - [Current validation](TEST_STATUS_v1.0.md)
 - [Extension contracts](EXTENDING.md), [GitHub release process](GITHUB_RELEASE.md), [upstream licenses/citations](THIRD_PARTY.md)
 
+Planned next version (not implemented production capabilities):
+
+- [1.1 multi-species engineering plan / 中文](MULTISPECIES_PLAN_v1.1_zh.md)
+- [Five-species input formats and preparation / 中文](MULTISPECIES_INPUTS_zh.md), [editable input template](../examples/multispecies/inputs.template.json)
+
 Historical evidence and implementation contracts:
 
 - [0.6 single-species design](SINGLE_SPECIES_v0.6.md), [0.7 supervisor contract](RELEASE_CANDIDATE_v0.7.md): retained underlying designs; 1.0 changes take precedence where specified.

@@ -67,7 +67,7 @@
       "bytes": 6762
     },
     "docs/INDEX.md": {
-      "bytes": 1883
+      "bytes": 2184
     },
     "docs/INSTALL.md": {
       "bytes": 7373
@@ -80,6 +80,12 @@
     },
     "docs/INSTALL_FIX_v0.1.2_2026-10-08.md": {
       "bytes": 4476
+    },
+    "docs/MULTISPECIES_INPUTS_zh.md": {
+      "bytes": 9656
+    },
+    "docs/MULTISPECIES_PLAN_v1.1_zh.md": {
+      "bytes": 18498
     },
     "docs/PROJECTIZATION_zh.md": {
       "bytes": 4030
@@ -332,6 +338,9 @@
     },
     "examples/general_genome.json": {
       "bytes": 1247
+    },
+    "examples/multispecies/inputs.template.json": {
+      "bytes": 3253
     },
     "pyproject.toml": {
       "bytes": 809
