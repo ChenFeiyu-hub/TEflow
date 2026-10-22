@@ -1,0 +1,167 @@
+{
+  "scope": "TRF/DIAMOND/HMMER isolated lightweight test environment; no HELIANO/HiTE installed",
+  "packages": [
+    {
+      "name": "hmmer",
+      "version": "3.4",
+      "build": "h7d74f8d_5",
+      "channel": "bioconda",
+      "sha256": "b0ea2115beb20bbd3fe63dd8e41bfc29eab42a0c3982f91f0e018840567f37b6",
+      "url": "https://conda.anaconda.org/bioconda/linux-64/hmmer-3.4-h7d74f8d_5.conda"
+    },
+    {
+      "name": "diamond",
+      "version": "2.1.11",
+      "build": "h5ca1c30_2",
+      "channel": "bioconda",
+      "sha256": "b7d65cd128a8e51466106131615676ca5ae147c36e5b606d556985d42fae288b",
+      "url": "https://conda.anaconda.org/bioconda/linux-64/diamond-2.1.11-h5ca1c30_2.tar.bz2"
+    },
+    {
+      "name": "trf",
+      "version": "4.10.0rc2",
+      "build": "h7b50bb2_0",
+      "channel": "bioconda",
+      "sha256": "45eb354cd04a0a13496489544eee542d2069bb938c8135762e0d7f0e33071b82",
+      "url": "https://conda.anaconda.org/bioconda/linux-64/trf-4.10.0rc2-h7b50bb2_0.tar.bz2"
+    },
+    {
+      "name": "gsl",
+      "version": "2.7",
+      "build": "he838d99_0",
+      "channel": "conda-forge",
+      "sha256": "132a918b676dd1f533d7c6f95e567abf7081a6ea3251c3280de35ef600e0da87",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/gsl-2.7-he838d99_0.tar.bz2"
+    },
+    {
+      "name": "libcblas",
+      "version": "3.11.0",
+      "build": "11_h0358290_openblas",
+      "channel": "conda-forge",
+      "sha256": "f7d1bbdea61cf94ba219d17b2cb571a29830f8025385af799bff5a7ad1ef45e6",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libcblas-3.11.0-11_h0358290_openblas.conda"
+    },
+    {
+      "name": "libblas",
+      "version": "3.11.0",
+      "build": "11_h4a7cf45_openblas",
+      "channel": "conda-forge",
+      "sha256": "d942e0c820d60a613a6f786d074f0820fb6343e3f1ccfb110b1d98b44fb75968",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libblas-3.11.0-11_h4a7cf45_openblas.conda"
+    },
+    {
+      "name": "openmpi",
+      "version": "4.1.6",
+      "build": "hc5af2df_101",
+      "channel": "conda-forge",
+      "sha256": "f0769dd891e1735be4606ec8643951e5cbca199f774e58c7d933f70a70134ce4",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/openmpi-4.1.6-hc5af2df_101.conda"
+    },
+    {
+      "name": "libopenblas",
+      "version": "0.3.34",
+      "build": "pthreads_hf13c14d_2",
+      "channel": "conda-forge",
+      "sha256": "69a722751e14eab2eb3bfdcb9acb1187afbd962b0c49b48d829341e0f6787f60",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libopenblas-0.3.34-pthreads_hf13c14d_2.conda"
+    },
+    {
+      "name": "libgfortran-ng",
+      "version": "16.2.0",
+      "build": "h69a702a_7",
+      "channel": "conda-forge",
+      "sha256": "d5c80029e15b2e4c404a9a7189b607be566c7ea6142d43291c81648958ffe1f0",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgfortran-ng-16.2.0-h69a702a_7.conda"
+    },
+    {
+      "name": "libstdcxx-ng",
+      "version": "16.2.0",
+      "build": "hdf11a46_7",
+      "channel": "conda-forge",
+      "sha256": "337f481db36cc357884f05f404ccd1b3a7e0fc1ee48ec5c884e4281d213bc863",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-16.2.0-hdf11a46_7.conda"
+    },
+    {
+      "name": "libgfortran",
+      "version": "16.2.0",
+      "build": "h69a702a_7",
+      "channel": "conda-forge",
+      "sha256": "9682ae4dd11487e10b904b3cb3ab6379cad25233d45fdfdf90d54349df244494",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgfortran-16.2.0-h69a702a_7.conda"
+    },
+    {
+      "name": "libgcc-ng",
+      "version": "16.2.0",
+      "build": "h69a702a_7",
+      "channel": "conda-forge",
+      "sha256": "03b54d7008de080a17cc2174b0e4acd6d06e1c981b2eb19846f46d8f59966034",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-16.2.0-h69a702a_7.conda"
+    },
+    {
+      "name": "libstdcxx",
+      "version": "16.2.0",
+      "build": "h934c35e_7",
+      "channel": "conda-forge",
+      "sha256": "fa7018298629fc429971fffd6ecba3d27a7b02e4e890d6a93ea01ffebe8cb745",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-16.2.0-h934c35e_7.conda"
+    },
+    {
+      "name": "libgfortran5",
+      "version": "16.2.0",
+      "build": "h6b99dfc_7",
+      "channel": "conda-forge",
+      "sha256": "04dbab12c925b92977bb835dd2f5eda413607afa79f95a554e5a04b07a380322",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-16.2.0-h6b99dfc_7.conda"
+    },
+    {
+      "name": "libgcc",
+      "version": "16.2.0",
+      "build": "ha9f2e26_7",
+      "channel": "conda-forge",
+      "sha256": "e031634c3a928f9594eba868bc46ef5230d6571a364a0c63215b06c4563bfcea",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-16.2.0-ha9f2e26_7.conda"
+    },
+    {
+      "name": "_openmp_mutex",
+      "version": "4.5",
+      "build": "20_gnu",
+      "channel": "conda-forge",
+      "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda"
+    },
+    {
+      "name": "zlib",
+      "version": "1.3.2",
+      "build": "h25fd6f3_3",
+      "channel": "conda-forge",
+      "sha256": "16080a1c7724f7d25727cdc23c7658e0cec2db52448c1dc0c33467ee2c6e1c62",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.2-h25fd6f3_3.conda"
+    },
+    {
+      "name": "libgomp",
+      "version": "16.2.0",
+      "build": "he0feb66_7",
+      "channel": "conda-forge",
+      "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda"
+    },
+    {
+      "name": "mpi",
+      "version": "1.0",
+      "build": "openmpi",
+      "channel": "conda-forge",
+      "sha256": "54cf44ee2c122bce206f834a825af06e3b14fc4fd58c968ae9329715cc281d1e",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/mpi-1.0-openmpi.tar.bz2"
+    },
+    {
+      "name": "libzlib",
+      "version": "1.3.2",
+      "build": "h25fd6f3_3",
+      "channel": "conda-forge",
+      "sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_3.conda"
+    }
+  ],
+  "dustmasker": "existing blast-2.17.0-hb02a186_1",
+  "trf_cli": "4.10.0-rc.2"
+}

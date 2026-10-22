@@ -1,0 +1,7 @@
+# Published HELIANO bundle; isolated from EDTA and TEtrimmer.
+channels:
+  - zhenlisme
+  - conda-forge
+  - bioconda
+dependencies:
+  - heliano=1.3.1

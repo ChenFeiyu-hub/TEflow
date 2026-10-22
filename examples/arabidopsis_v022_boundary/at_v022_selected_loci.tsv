@@ -1,0 +1,16 @@
+locus_id	group_id	seqid	start	end	strand	role	reason
+H0000134_native	H0000134	3	16234660	16235708	-	reference	Previously verified native representative; compare unmasked reference DNA
+H0000134_pair01	H0000134	3	16275832	16276874	-	candidate	Exploratory endpoint pair from prior review; HSPs 4020/4846; selected by already reported native-length +/-10% interval
+H0000134_pair02	H0000134	4	3358194	3359233	+	candidate	Exploratory endpoint pair from prior review; HSPs 4712/4966; selected by already reported native-length +/-10% interval
+H0000134_pair03	H0000134	1	9836508	9837580	+	candidate	Exploratory endpoint pair from prior review; HSPs 4327/5455; selected by already reported native-length +/-10% interval
+H0000134_pair04	H0000134	4	1956611	1957702	+	candidate	Exploratory endpoint pair from prior review; HSPs 4676/4964; selected by already reported native-length +/-10% interval
+H0000134_pair05	H0000134	4	792040	793141	-	candidate	Exploratory endpoint pair from prior review; HSPs 4690/4968; selected by already reported native-length +/-10% interval
+H0000134_pair06	H0000134	3	17209572	17210551	-	candidate	Exploratory endpoint pair from prior review; HSPs 4044/4755; selected by already reported native-length +/-10% interval
+H0000139_native	H0000139	3	17275743	17299939	-	reference	Previously verified native representative; compare unmasked reference DNA
+H0000139_pair01	H0000139	1	12992996	13017623	-	candidate	Exploratory endpoint pair from prior review; HSPs 510/883; selected by already reported native-length +/-10% interval
+H0000139_pair02	H0000139	5	13982135	14005020	+	candidate	Exploratory endpoint pair from prior review; HSPs 590/1266; selected by already reported native-length +/-10% interval
+H0000139_pair03	H0000139	4	7034251	7060697	-	candidate	Exploratory endpoint pair from prior review; HSPs 680/1088; selected by already reported native-length +/-10% interval
+H0000060_native	H0000060	2	1302357	1322855	-	reference	Previously verified native representative; compare unmasked reference DNA
+H0000060_pair01	H0000060	1	13473756	13495988	-	candidate	Exploratory endpoint pair from prior review; HSPs 1640/2075; selected by already reported native-length +/-10% interval
+H0000025_native	H0000025	1	13473764	13495988	-	reference	Previously verified native representative; compare unmasked reference DNA
+H0000025_pair01	H0000025	1	12618638	12636316	+	candidate	Prespecified cross-family boundary check near H0000020 native; HSPs 2537/3364; outside native-length +/-10% interval

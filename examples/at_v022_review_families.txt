@@ -1,0 +1,14 @@
+# Frozen exploratory queue from the TAIR10 v022 raw-alignment review.
+# Parent HELIANO IDs: H0060,H0025,H0021,H0204,H0020,H0139,H0175,H0066,H0089,H0122,H0134.
+# This queue is case-specific, not a universal threshold or an accepted mask.
+EH0000816
+EH0000781
+EH0000777
+EH0000960
+EH0000776
+EH0000895
+EH0000931
+EH0000822
+EH0000845
+EH0000878
+EH0000890

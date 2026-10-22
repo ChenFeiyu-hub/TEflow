@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "name": "TEtrimmer",
+      "version": "1.7.2",
+      "filename": "TEtrimmer-1.7.2.tar.gz",
+      "url": "https://codeload.github.com/qjiangzhao/TEtrimmer/tar.gz/refs/tags/v1.7.2",
+      "sha256": "da3cca890b86f8ae406b7cc8acbefb3d79be0f04f6fb57aee9a5d00990d20dc2",
+      "root": "TEtrimmer-1.7.2",
+      "include": ["tetrimmer", "LICENSE"],
+      "entry": "tetrimmer/TEtrimmer.py",
+      "command": "TEtrimmer",
+      "interpreter": "python"
+    },
+    {
+      "name": "PfamScan",
+      "version": "1.6",
+      "filename": "PfamScan.tar.gz",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/Pfam/Tools/PfamScan.tar.gz",
+      "sha256": "365c96bc150d5057349c3016d62667c58cb33afcfb6329457ae16ab5aae4f401",
+      "root": "PfamScan",
+      "entry": "pfam_scan.pl",
+      "command": "pfam_scan.pl",
+      "interpreter": "perl"
+    }
+  ]
+}

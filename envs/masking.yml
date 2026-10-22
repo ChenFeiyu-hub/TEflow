@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - repeatmasker=4.2.4
+  - rmblast=2.17.0
+  - trf=4.10.0
+  # dustmasker is included in rmblast; a separate blast package conflicts
+  # with this RMBlast build's entrez-direct dependency and shared file paths.

@@ -1,0 +1,317 @@
+{
+  "version": "0.5.0.dev2",
+  "date_local": "2026-10-17",
+  "timezone": "Asia/Shanghai",
+  "source_fingerprint": "0bfffef754521729426ce388d1802ed18ebb838e5a36bc557ff2ff1f6e19ab61",
+  "runtime_digest": "05621344d851d78329ea18a15765108d7e3603fc07f2009e40080a1ca1e692c0",
+  "linux_units": {
+    "total": 138,
+    "passed": 137,
+    "skipped": 1
+  },
+  "windows_units": {
+    "total": 138,
+    "passed": 125,
+    "skipped": 13
+  },
+  "installed_cli": "pass",
+  "wheel_sdist_payload_equal": true,
+  "heartbeat_fixture": {
+    "status": "HEARTBEAT_RECEIPT_CANCEL_FIXTURE_PASSED",
+    "startup_gate_mocked": true,
+    "full_logout_tested": false,
+    "host_settings_changed": false,
+    "observed_heartbeat_samples": 2,
+    "cleanup": true
+  },
+  "server_dev1_evidence": "User terminal output: 4 allocation-dependent B2 failures, 3 passes; logout not launched",
+  "server_dev2_b2": "pending",
+  "server_dev2_b3": "pending",
+  "remote_ci": "pending",
+  "source_b2": {
+    "status": "B2_ACCEPTANCE_PASSED",
+    "cases": [
+      {
+        "case": "success",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 53669888
+      },
+      {
+        "case": "child_oom",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true
+        },
+        "memory_peak_bytes": 134217728
+      },
+      {
+        "case": "group_oom",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 133627904
+      },
+      {
+        "case": "child_sigkill",
+        "status": "pass",
+        "classification": "CHILD_SIGNAL",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true,
+          "zero_observed_oom_kills": true
+        },
+        "memory_peak_bytes": 20111360
+      },
+      {
+        "case": "timeout",
+        "status": "pass",
+        "classification": "TIMEOUT",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 20107264
+      },
+      {
+        "case": "cancel",
+        "status": "pass",
+        "classification": "CANCELLED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 20107264
+      },
+      {
+        "case": "reattach",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "fresh_observer_attached": true,
+          "wrong_identity_stop_refused": true,
+          "duplicate_launch_refused": true
+        },
+        "memory_peak_bytes": 53669888
+      },
+      {
+        "case": "success_vmem",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "virtual_reservation_observed": true
+        },
+        "memory_peak_bytes": 53657600
+      },
+      {
+        "case": "child_oom_vmem",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true,
+          "virtual_reservation_observed": true
+        },
+        "memory_peak_bytes": 134217728
+      }
+    ]
+  },
+  "installed_b2": {
+    "status": "B2_ACCEPTANCE_PASSED",
+    "cases": [
+      {
+        "case": "success",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 53669888
+      },
+      {
+        "case": "child_oom",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true
+        },
+        "memory_peak_bytes": 134217728
+      },
+      {
+        "case": "group_oom",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 129425408
+      },
+      {
+        "case": "child_sigkill",
+        "status": "pass",
+        "classification": "CHILD_SIGNAL",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true,
+          "zero_observed_oom_kills": true
+        },
+        "memory_peak_bytes": 20377600
+      },
+      {
+        "case": "timeout",
+        "status": "pass",
+        "classification": "TIMEOUT",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 20119552
+      },
+      {
+        "case": "cancel",
+        "status": "pass",
+        "classification": "CANCELLED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true
+        },
+        "memory_peak_bytes": 20111360
+      },
+      {
+        "case": "reattach",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "fresh_observer_attached": true,
+          "wrong_identity_stop_refused": true,
+          "duplicate_launch_refused": true
+        },
+        "memory_peak_bytes": 53665792
+      },
+      {
+        "case": "success_vmem",
+        "status": "pass",
+        "classification": "SUCCEEDED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "virtual_reservation_observed": true
+        },
+        "memory_peak_bytes": 53673984
+      },
+      {
+        "case": "child_oom_vmem",
+        "status": "pass",
+        "classification": "OOM_CONFIRMED",
+        "checks": {
+          "expected_classification": true,
+          "cleanup_confirmed": true,
+          "guarded_parent": true,
+          "guarded_child": true,
+          "fresh_cgroup_events": true,
+          "no_controller_error": true,
+          "parent_exit_zero": true,
+          "child_killed": true,
+          "virtual_reservation_observed": true
+        },
+        "memory_peak_bytes": 134217728
+      }
+    ]
+  }
+}

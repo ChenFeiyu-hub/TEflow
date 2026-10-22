@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "scope": "Real Snakemake; seven synthetic upstream branches; no biological accuracy claim",
+  "checks": [
+    "schema1_EDTA_RM_import",
+    "reject_TTE_import",
+    "standalone_EDTA_export",
+    "seven_branch_DAG",
+    "protein_Pfam_QC_contracts",
+    "native_coordinate_restoration",
+    "exact_alias_assembly",
+    "reference_agreement",
+    "promoter_opportunities",
+    "completed_resume",
+    "large_unchanged_input_touch",
+    "scheduler_marker_reconstruction",
+    "changed_input_refused",
+    "changed_export_refused",
+    "feedback_archive",
+    "server_target_preflight"
+  ],
+  "branches": [
+    "edta",
+    "edta_tetrimmer",
+    "heliano",
+    "hite",
+    "edta_plus_heliano",
+    "reference_only",
+    "reference_plus_edta"
+  ],
+  "genome_physical_bytes": 1100199
+}

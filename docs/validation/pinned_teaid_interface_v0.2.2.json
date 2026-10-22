@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "upstream_teaid_sha256": "f43e4729fee182a3f688451bb755a36497868dcbaf0c47a90c8513b6237150e9",
+  "checks": [
+    "unchanged_upstream_TEAid_class",
+    "fork_inherits_module_proxy",
+    "two_private_cwds",
+    "upstream_final_path_contract",
+    "raw_and_exported_ORF_outputs_retained",
+    "no_error_suppression"
+  ],
+  "scope": "Real pinned upstream Python class and Linux fork; synthetic TE-Aid executable. Not a full installed TE-Aid run."
+}

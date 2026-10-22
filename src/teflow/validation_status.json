@@ -1,0 +1,9 @@
+{
+  "as_of": "2026-10-22",
+  "real_genome_run": {"version": "0.6.0", "species": "Arabidopsis thaliana TAIR10", "branches": ["edta", "edta_tetrimmer", "heliano", "hite", "edta_plus_heliano"], "status": "completed"},
+  "target_server_supervisor": {"version": "0.7.0rc1", "date": "2026-10-22", "status": "bounded_acceptance_passed", "real_upstream_tools": false},
+  "current_release_checks": "See docs/TEST_STATUS_v1.0.md and GitHub Actions for the exact tested commit; historical acceptance does not certify new changes",
+  "production_hard_memory_limits": false,
+  "strict_logout_B3": "not_proven",
+  "cross_species_accuracy": "not_established"
+}

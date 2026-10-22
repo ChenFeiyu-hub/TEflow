@@ -1,0 +1,5 @@
+{
+  "status": "pass",
+  "scope": "Synthetic adapters + actual Snakemake DAG, not upstream biology",
+  "output": "/tmp/teflow-v02-final/legacy/results/synthetic_only/fixture"
+}

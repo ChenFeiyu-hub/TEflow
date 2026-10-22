@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "date": "2026-10-13",
+  "status": "pass",
+  "source_fingerprint_linux": "956d076f8e1edacbe8ea4c0bdf61e10a8f98853987213a0b351cfa45b11b8fa4",
+  "linux": {
+    "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+    "snakemake": "9.27.0",
+    "unit_total": 48,
+    "unit_passed": 48,
+    "unit_skipped": 0,
+    "unit_log_sha256": "65e11cd658eb669e4679bec2ed569cc370ab614a96e7bf75f7ba519f916ae93e"
+  },
+  "windows": {
+    "python": "3.12.14",
+    "unit_total": 48,
+    "unit_passed": 40,
+    "unit_skipped": 8,
+    "scope": "Linux-only tests and optional micromamba test skipped; execution recorded in task tool output"
+  },
+  "suites": [
+    {
+      "name": "unit",
+      "code": 0
+    },
+    {
+      "name": "legacy",
+      "code": 0
+    },
+    {
+      "name": "v02",
+      "code": 0
+    }
+  ],
+  "additional": [
+    {
+      "name": "recovery",
+      "code": 0
+    },
+    {
+      "name": "teaid",
+      "code": 0
+    }
+  ],
+  "biological_benchmark": false,
+  "server_whole_genome": "pending"
+}

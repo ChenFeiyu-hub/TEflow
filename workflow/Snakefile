@@ -1,0 +1,59 @@
+"""Disposable scheduling markers never serve as authoritative scientific receipts."""
+import sys
+from pathlib import Path
+from teflow.common import load_config
+from teflow.branches import graph
+from teflow.runtime import check_frozen
+from teflow.resources import stage_resources
+
+if "teflow_config" not in config:
+    raise ValueError("Supply --config teflow_config=/absolute/path/configuration.json")
+C = load_config(config["teflow_config"])
+check_frozen(C)
+CFG, PY = C["_config_path"], sys.executable
+ROOT = str(Path(C["work_root"]) / C["run_id"])
+SAMPLES = [s["id"] for s in C["samples"]]
+CORES, MEM = C["execution"]["threads"], C["execution"]["mem_mb"]
+GRAPH = graph(C)
+RESUME = "--resume" if str(config.get("resume", "0")) == "1" else ""
+
+def stage_inputs(w):
+    return [ROOT + "/" + w.sample + "/.dag/prepared.done", ROOT + "/doctor/doctor.json"] + [
+        ROOT + "/" + w.sample + "/.dag/" + s + ".done" for s in GRAPH[w.stage]]
+
+rule all:
+    input:
+        expand(ROOT + "/{sample}/.dag/export.done", sample=SAMPLES)
+
+rule prepare:
+    input:
+        genome=lambda w: next(s["genome"] for s in C["samples"] if s["id"] == w.sample),
+        annotation=lambda w: [s["annotation"] for s in C["samples"] if s["id"] == w.sample and s.get("annotation")],
+        cds=lambda w: [s["cds"] for s in C["samples"] if s["id"] == w.sample and s.get("cds")],
+        config=CFG,
+        frozen=ROOT + "/run_manifest.json"
+    output:
+        ROOT + "/{sample}/.dag/prepared.done"
+    threads: stage_resources(C,'prepared')['threads']
+    resources:
+        mem_mb=stage_resources(C,'prepared')['mem_mb'],
+        io_heavy=stage_resources(C,'prepared')['io'],
+        stage_slots=1
+    shell:
+        "{PY:q} -m teflow prepare --config {CFG:q} --sample {wildcards.sample:q}"
+
+rule stage:
+    input:
+        stage_inputs
+    output:
+        ROOT + "/{sample}/.dag/{stage}.done"
+    wildcard_constraints:
+        stage="|".join(GRAPH)
+    threads:
+        lambda w: stage_resources(C,w.stage)['threads']
+    resources:
+        mem_mb=lambda w: stage_resources(C,w.stage)['mem_mb'],
+        io_heavy=lambda w: stage_resources(C,w.stage)['io'],
+        stage_slots=1
+    shell:
+        "{PY:q} -m teflow stage --config {CFG:q} --sample {wildcards.sample:q} --name {wildcards.stage:q} --threads {threads} {RESUME}"

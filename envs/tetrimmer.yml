@@ -1,0 +1,49 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  # Install unchanged TEtrimmer 1.7.2 and PfamScan 1.6 sources using the
+  # checksum-locked installer, after this runtime environment has been created.
+  # The Bioconda pfam_scan -> perl-bioperl metapackage pulls obsolete
+  # perl-bio-samtools/zlib dependencies into this otherwise modern toolchain.
+  - perl=5.32.1
+  - perl-bioperl-core=1.7.8
+  - perl-io-string
+  - perl-moose
+  - perl-ipc-run
+  - numpy
+  - r-base
+  # RMBlast below also supplies blastn/makeblastdb/blastdbcmd/dustmasker.
+  # Do not co-install blast: 2.17.0 builds have incompatible entrez-direct
+  # constraints and overlap RMBlast's executable/library paths.
+  - biopython
+  - bedtools>=2.31.1
+  - cd-hit
+  - emboss
+  - hmmer
+  - iqtree
+  - matplotlib-base
+  - seaborn
+  - pillow
+  - mafft
+  - multiprocess
+  - pandas
+  - plotly
+  - pypdf2
+  - regex
+  - requests
+  - samtools>=1.2
+  - scikit-learn
+  - tk
+  - urllib3
+  - click
+  - dill
+  - joblib
+  - nseg
+  - recon
+  - trf
+  - ghostscript
+  - repeatmasker=4.2.4
+  - repeatmodeler=2.0.9
+  - rmblast=2.17.0

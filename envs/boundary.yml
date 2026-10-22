@@ -1,0 +1,7 @@
+name: teflow-boundary
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - blast=2.17.0
+  - mafft=7.526

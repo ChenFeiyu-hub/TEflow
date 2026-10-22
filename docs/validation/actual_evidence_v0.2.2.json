@@ -1,0 +1,46 @@
+{
+  "audit_reproduced": true,
+  "strict_audit_still_blocks_error": true,
+  "input_sha256": "ddc517ce165b750da9f25bf2ed0438cfed121c923c1483cfabe52c418fcd8464",
+  "final_sha256": "c8fc2bd1fe4f14a07ef379bb660d540594e054a27374352f568e10c2cc7f1f03",
+  "affected_msa_sequences": 12,
+  "affected_msa_columns": 4829,
+  "consensus_threshold": 0.7,
+  "consensus_matches_final_fasta": true,
+  "orf_tables_in_support": 0,
+  "orf_table_validation": "unavailable; default cleanup removed per-query intermediates, not a passed header check",
+  "pdf_pages_reviewed": 8,
+  "proof_pdf_sha256": "e38485e01cb3a2fce2e072d9aaeeb068b469572c1bba7126f8c72036385ace8f",
+  "audit": {
+    "input_families": 756,
+    "terminal_inputs": 756,
+    "summary_rows": 816,
+    "retained_families": 252,
+    "statuses": {
+      "skipped": 580,
+      "processed": 236
+    },
+    "evaluations": {
+      "NaN": 587,
+      "Good": 72,
+      "Need_check": 79,
+      "Need_ext": 18,
+      "Perfect": 45,
+      "Reco_check": 15
+    },
+    "retained_origins": {
+      "refined_consensus": 88,
+      "original_input_low_copy": 7,
+      "original_input_fallback": 157
+    },
+    "error_files": [
+      {
+        "path": "Multiple_sequence_alignment/error_file.txt",
+        "bytes": 183,
+        "sha256": "e25ab0188bdc3d8f29f2b23cd8fab111d949e9b8085104e8462968f430164fd8"
+      }
+    ],
+    "status": "quarantined",
+    "interpretation": "Summary evaluations may describe a rejected extension; retained_length describes the actual FASTA. Labels are not calibrated accuracy."
+  }
+}

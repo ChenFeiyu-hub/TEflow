@@ -1,0 +1,24 @@
+name: Bug report
+description: Report installation, command or artifact failures
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment
+      description: teflow version, Linux/Python version, enabled tools and their versions
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Command and expected/observed behavior
+      description: Use a minimal synthetic example when possible. Redact private paths or IDs if needed.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Error and relevant logs
+      description: Include the failing attempt report or a small reviewed feedback archive; do not attach genomes/databases.
+    validations:
+      required: true

@@ -1,0 +1,1342 @@
+{
+  "date": "2026-10-13",
+  "platform": "linux-64",
+  "cpu_affinity": "one CPU",
+  "installed": false,
+  "environments": [
+    {
+      "environment": "heliano",
+      "status": "solved_only",
+      "packages": 169,
+      "selected_packages": [
+        {
+          "name": "_openmp_mutex",
+          "version": "4.5",
+          "build": "20_gnu",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "_r-mutex",
+          "version": "1.0.1",
+          "build": "anacondar_1",
+          "channel": "conda-forge",
+          "download_size": "4kB"
+        },
+        {
+          "name": "bedtools",
+          "version": "2.30.0",
+          "build": "h468198e_3",
+          "channel": "bioconda",
+          "download_size": "16MB"
+        },
+        {
+          "name": "binutils_impl_linux-64",
+          "version": "2.46.1",
+          "build": "bootstrap_h59bd682_3",
+          "channel": "conda-forge",
+          "download_size": "4MB"
+        },
+        {
+          "name": "biopython",
+          "version": "1.85",
+          "build": "py39h8cd3c5a_1",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "blast",
+          "version": "2.13.0",
+          "build": "hf3cf87c_0",
+          "channel": "bioconda",
+          "download_size": "24MB"
+        },
+        {
+          "name": "bwidget",
+          "version": "1.10.1",
+          "build": "hfc2019e_3",
+          "channel": "conda-forge",
+          "download_size": "135kB"
+        },
+        {
+          "name": "bzip2",
+          "version": "1.0.8",
+          "build": "hda65f42_10",
+          "channel": "conda-forge",
+          "download_size": "258kB"
+        },
+        {
+          "name": "c-ares",
+          "version": "1.34.8",
+          "build": "hebe6cf0_2",
+          "channel": "conda-forge",
+          "download_size": "229kB"
+        },
+        {
+          "name": "ca-certificates",
+          "version": "2026.7.22",
+          "build": "hbd8a1cb_0",
+          "channel": "conda-forge",
+          "download_size": "132kB"
+        },
+        {
+          "name": "cairo",
+          "version": "1.16.0",
+          "build": "ha61ee94_1014",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "cd-hit",
+          "version": "4.8.1",
+          "build": "h43eeafb_11",
+          "channel": "bioconda",
+          "download_size": "188kB"
+        },
+        {
+          "name": "curl",
+          "version": "7.86.0",
+          "build": "h7bff187_1",
+          "channel": "conda-forge",
+          "download_size": "93kB"
+        },
+        {
+          "name": "dialign2",
+          "version": "2.2.1",
+          "build": "h9948957_9",
+          "channel": "bioconda",
+          "download_size": "176kB"
+        },
+        {
+          "name": "emboss",
+          "version": "6.6.0",
+          "build": "hcf2adaa_10",
+          "channel": "bioconda",
+          "download_size": "98MB"
+        },
+        {
+          "name": "entrez-direct",
+          "version": "26.0",
+          "build": "h1079eea_0",
+          "channel": "bioconda",
+          "download_size": "16MB"
+        },
+        {
+          "name": "expat",
+          "version": "2.8.5",
+          "build": "hd2095e1_0",
+          "channel": "conda-forge",
+          "download_size": "152kB"
+        },
+        {
+          "name": "font-ttf-dejavu-sans-mono",
+          "version": "2.37",
+          "build": "hab24e00_0",
+          "channel": "conda-forge",
+          "download_size": "397kB"
+        },
+        {
+          "name": "font-ttf-inconsolata",
+          "version": "3.000",
+          "build": "h77eed37_0",
+          "channel": "conda-forge",
+          "download_size": "97kB"
+        },
+        {
+          "name": "font-ttf-source-code-pro",
+          "version": "2.038",
+          "build": "h77eed37_0",
+          "channel": "conda-forge",
+          "download_size": "701kB"
+        },
+        {
+          "name": "font-ttf-ubuntu",
+          "version": "0.83",
+          "build": "h77eed37_3",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "fontconfig",
+          "version": "2.14.2",
+          "build": "h14ed4e7_0",
+          "channel": "conda-forge",
+          "download_size": "272kB"
+        },
+        {
+          "name": "fonts-conda-ecosystem",
+          "version": "1",
+          "build": "0",
+          "channel": "conda-forge",
+          "download_size": "4kB"
+        },
+        {
+          "name": "fonts-conda-forge",
+          "version": "1",
+          "build": "hc364b38_1",
+          "channel": "conda-forge",
+          "download_size": "4kB"
+        },
+        {
+          "name": "freetype",
+          "version": "2.12.1",
+          "build": "h267a509_2",
+          "channel": "conda-forge",
+          "download_size": "635kB"
+        },
+        {
+          "name": "fribidi",
+          "version": "1.0.17",
+          "build": "h7cc23a3_0",
+          "channel": "conda-forge",
+          "download_size": "64kB"
+        },
+        {
+          "name": "gawk",
+          "version": "5.4.1",
+          "build": "h0a3468a_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "gcc_impl_linux-64",
+          "version": "16.2.0",
+          "build": "h9891192_7",
+          "channel": "conda-forge",
+          "download_size": "86MB"
+        },
+        {
+          "name": "genometools-genometools",
+          "version": "1.6.2",
+          "build": "py39h58cc16e_6",
+          "channel": "bioconda",
+          "download_size": "20MB"
+        },
+        {
+          "name": "gettext",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "553kB"
+        },
+        {
+          "name": "gettext-tools",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "4MB"
+        },
+        {
+          "name": "gfortran_impl_linux-64",
+          "version": "16.2.0",
+          "build": "hf930d89_7",
+          "channel": "conda-forge",
+          "download_size": "21MB"
+        },
+        {
+          "name": "giflib",
+          "version": "5.2.2",
+          "build": "ha257d8a_1",
+          "channel": "conda-forge",
+          "download_size": "77kB"
+        },
+        {
+          "name": "gmp",
+          "version": "6.3.0",
+          "build": "hfd2156b_3",
+          "channel": "conda-forge",
+          "download_size": "493kB"
+        },
+        {
+          "name": "graphite2",
+          "version": "1.3.15",
+          "build": "h54a6638_1",
+          "channel": "conda-forge",
+          "download_size": "103kB"
+        },
+        {
+          "name": "gsl",
+          "version": "2.7",
+          "build": "he838d99_0",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "gxx_impl_linux-64",
+          "version": "16.2.0",
+          "build": "h0d273dc_7",
+          "channel": "conda-forge",
+          "download_size": "17MB"
+        },
+        {
+          "name": "harfbuzz",
+          "version": "6.0.0",
+          "build": "h8e241bc_0",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "heliano",
+          "version": "1.3.1",
+          "build": "py39r41_0",
+          "channel": "zhenlisme",
+          "download_size": "292kB"
+        },
+        {
+          "name": "hmmer",
+          "version": "3.3",
+          "build": "he1b5a44_0",
+          "channel": "bioconda",
+          "download_size": "4MB"
+        },
+        {
+          "name": "icu",
+          "version": "70.1",
+          "build": "h27087fc_0",
+          "channel": "conda-forge",
+          "download_size": "14MB"
+        },
+        {
+          "name": "jpeg",
+          "version": "9e",
+          "build": "h0b41bf4_3",
+          "channel": "conda-forge",
+          "download_size": "240kB"
+        },
+        {
+          "name": "kernel-headers_linux-64",
+          "version": "6.12.0",
+          "build": "he073ed8_6",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "keyutils",
+          "version": "1.6.3",
+          "build": "h7cc23a3_1",
+          "channel": "conda-forge",
+          "download_size": "135kB"
+        },
+        {
+          "name": "krb5",
+          "version": "1.19.3",
+          "build": "h3790be6_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "ld_impl_linux-64",
+          "version": "2.46.1",
+          "build": "bootstrap_ha15bf96_3",
+          "channel": "conda-forge",
+          "download_size": "745kB"
+        },
+        {
+          "name": "lerc",
+          "version": "4.2.0",
+          "build": "hdb68285_0",
+          "channel": "conda-forge",
+          "download_size": "271kB"
+        },
+        {
+          "name": "libasprintf",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "53kB"
+        },
+        {
+          "name": "libasprintf-devel",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "36kB"
+        },
+        {
+          "name": "libblas",
+          "version": "3.11.0",
+          "build": "11_h4a7cf45_openblas",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "libcblas",
+          "version": "3.11.0",
+          "build": "11_h0358290_openblas",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "libcurl",
+          "version": "7.86.0",
+          "build": "h7bff187_1",
+          "channel": "conda-forge",
+          "download_size": "357kB"
+        },
+        {
+          "name": "libdeflate",
+          "version": "1.25",
+          "build": "hd45a770_1",
+          "channel": "conda-forge",
+          "download_size": "74kB"
+        },
+        {
+          "name": "libedit",
+          "version": "3.1.20260512",
+          "build": "pl5321h373387f_0",
+          "channel": "conda-forge",
+          "download_size": "136kB"
+        },
+        {
+          "name": "libev",
+          "version": "4.33",
+          "build": "h280c20c_3",
+          "channel": "conda-forge",
+          "download_size": "43kB"
+        },
+        {
+          "name": "libexpat",
+          "version": "2.8.5",
+          "build": "hd2095e1_0",
+          "channel": "conda-forge",
+          "download_size": "78kB"
+        },
+        {
+          "name": "libffi",
+          "version": "3.7.0",
+          "build": "h81df57d_1",
+          "channel": "conda-forge",
+          "download_size": "68kB"
+        },
+        {
+          "name": "libgcc",
+          "version": "16.2.0",
+          "build": "ha9f2e26_7",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "libgcc-devel_linux-64",
+          "version": "16.2.0",
+          "build": "he3ce08f_107",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "libgcc-ng",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgd",
+          "version": "2.3.3",
+          "build": "h5aea950_4",
+          "channel": "conda-forge",
+          "download_size": "222kB"
+        },
+        {
+          "name": "libgettextpo",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "187kB"
+        },
+        {
+          "name": "libgettextpo-devel",
+          "version": "0.25.1",
+          "build": "h0e23cf9_2",
+          "channel": "conda-forge",
+          "download_size": "38kB"
+        },
+        {
+          "name": "libgfortran",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgfortran-ng",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgfortran5",
+          "version": "16.2.0",
+          "build": "h6b99dfc_7",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "libglib",
+          "version": "2.78.1",
+          "build": "hebfc3b9_0",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "libgomp",
+          "version": "16.2.0",
+          "build": "he0feb66_7",
+          "channel": "conda-forge",
+          "download_size": "641kB"
+        },
+        {
+          "name": "libharu",
+          "version": "2.4.4",
+          "build": "h267a509_0",
+          "channel": "conda-forge",
+          "download_size": "606kB"
+        },
+        {
+          "name": "libiconv",
+          "version": "1.18",
+          "build": "h0cb94f2_3",
+          "channel": "conda-forge",
+          "download_size": "789kB"
+        },
+        {
+          "name": "libidn2",
+          "version": "2.3.8",
+          "build": "hfac485b_1",
+          "channel": "conda-forge",
+          "download_size": "139kB"
+        },
+        {
+          "name": "liblapack",
+          "version": "3.11.0",
+          "build": "11_h47877c9_openblas",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "libnghttp2",
+          "version": "1.51.0",
+          "build": "hdcd2b5c_0",
+          "channel": "conda-forge",
+          "download_size": "623kB"
+        },
+        {
+          "name": "libnsl",
+          "version": "2.0.1",
+          "build": "hb9d3cd8_1",
+          "channel": "conda-forge",
+          "download_size": "34kB"
+        },
+        {
+          "name": "libopenblas",
+          "version": "0.3.34",
+          "build": "pthreads_hf13c14d_2",
+          "channel": "conda-forge",
+          "download_size": "7MB"
+        },
+        {
+          "name": "libpng",
+          "version": "1.6.43",
+          "build": "h2797004_0",
+          "channel": "conda-forge",
+          "download_size": "288kB"
+        },
+        {
+          "name": "libsanitizer",
+          "version": "16.2.0",
+          "build": "h3048135_7",
+          "channel": "conda-forge",
+          "download_size": "8MB"
+        },
+        {
+          "name": "libsqlite",
+          "version": "3.46.0",
+          "build": "hde9e2c9_0",
+          "channel": "conda-forge",
+          "download_size": "865kB"
+        },
+        {
+          "name": "libssh2",
+          "version": "1.10.0",
+          "build": "haa6b8db_3",
+          "channel": "conda-forge",
+          "download_size": "239kB"
+        },
+        {
+          "name": "libstdcxx",
+          "version": "16.2.0",
+          "build": "h934c35e_7",
+          "channel": "conda-forge",
+          "download_size": "7MB"
+        },
+        {
+          "name": "libstdcxx-devel_linux-64",
+          "version": "16.2.0",
+          "build": "h86e191b_107",
+          "channel": "conda-forge",
+          "download_size": "23MB"
+        },
+        {
+          "name": "libstdcxx-ng",
+          "version": "16.2.0",
+          "build": "hdf11a46_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libtiff",
+          "version": "4.5.0",
+          "build": "h6adf6a1_2",
+          "channel": "conda-forge",
+          "download_size": "407kB"
+        },
+        {
+          "name": "libunistring",
+          "version": "0.9.10",
+          "build": "h7f98852_0",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "libuuid",
+          "version": "2.42.4",
+          "build": "hcfc3c73_0",
+          "channel": "conda-forge",
+          "download_size": "34kB"
+        },
+        {
+          "name": "libwebp",
+          "version": "1.2.4",
+          "build": "h1daa5a0_1",
+          "channel": "conda-forge",
+          "download_size": "84kB"
+        },
+        {
+          "name": "libwebp-base",
+          "version": "1.2.4",
+          "build": "h166bdaf_0",
+          "channel": "conda-forge",
+          "download_size": "413kB"
+        },
+        {
+          "name": "libxcb",
+          "version": "1.13",
+          "build": "h7f98852_1004",
+          "channel": "conda-forge",
+          "download_size": "400kB"
+        },
+        {
+          "name": "libxcrypt",
+          "version": "4.4.38",
+          "build": "h280c20c_0",
+          "channel": "conda-forge",
+          "download_size": "102kB"
+        },
+        {
+          "name": "libxml2",
+          "version": "2.10.3",
+          "build": "hca2bb57_4",
+          "channel": "conda-forge",
+          "download_size": "714kB"
+        },
+        {
+          "name": "libzlib",
+          "version": "1.2.13",
+          "build": "h4ab18f5_6",
+          "channel": "conda-forge",
+          "download_size": "62kB"
+        },
+        {
+          "name": "mafft",
+          "version": "7.526",
+          "build": "h4bc722e_0",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "make",
+          "version": "4.4.1",
+          "build": "hb03c661_3",
+          "channel": "conda-forge",
+          "download_size": "511kB"
+        },
+        {
+          "name": "mpfr",
+          "version": "4.2.2",
+          "build": "ha2cb11d_1",
+          "channel": "conda-forge",
+          "download_size": "730kB"
+        },
+        {
+          "name": "ncurses",
+          "version": "6.6",
+          "build": "hdb14827_1",
+          "channel": "conda-forge",
+          "download_size": "911kB"
+        },
+        {
+          "name": "numpy",
+          "version": "2.0.2",
+          "build": "py39h9cb892a_1",
+          "channel": "conda-forge",
+          "download_size": "8MB"
+        },
+        {
+          "name": "openssl",
+          "version": "1.1.1w",
+          "build": "hd590300_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "pandas",
+          "version": "2.3.1",
+          "build": "py39h1b6b32d_0",
+          "channel": "conda-forge",
+          "download_size": "12MB"
+        },
+        {
+          "name": "pango",
+          "version": "1.50.14",
+          "build": "hd33c08f_0",
+          "channel": "conda-forge",
+          "download_size": "438kB"
+        },
+        {
+          "name": "pcre",
+          "version": "8.45",
+          "build": "h9c3ff4c_0",
+          "channel": "conda-forge",
+          "download_size": "259kB"
+        },
+        {
+          "name": "pcre2",
+          "version": "10.40",
+          "build": "hc3806b6_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "perl",
+          "version": "5.32.1",
+          "build": "10_h7cc23a3_perl5",
+          "channel": "conda-forge",
+          "download_size": "13MB"
+        },
+        {
+          "name": "perl-archive-tar",
+          "version": "3.14",
+          "build": "pl5321hcbfc158_0",
+          "channel": "bioconda",
+          "download_size": "39kB"
+        },
+        {
+          "name": "perl-carp",
+          "version": "1.50",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "22kB"
+        },
+        {
+          "name": "perl-common-sense",
+          "version": "3.75",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "20kB"
+        },
+        {
+          "name": "perl-compress-raw-bzip2",
+          "version": "2.214",
+          "build": "pl5321hda65f42_0",
+          "channel": "conda-forge",
+          "download_size": "56kB"
+        },
+        {
+          "name": "perl-compress-raw-zlib",
+          "version": "2.214",
+          "build": "pl5321h4dac143_0",
+          "channel": "conda-forge",
+          "download_size": "81kB"
+        },
+        {
+          "name": "perl-encode",
+          "version": "3.24",
+          "build": "pl5321hb03c661_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "perl-exporter",
+          "version": "5.74",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "19kB"
+        },
+        {
+          "name": "perl-exporter-tiny",
+          "version": "1.002002",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "perl-extutils-makemaker",
+          "version": "7.70",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "157kB"
+        },
+        {
+          "name": "perl-io-compress",
+          "version": "2.216",
+          "build": "pl5321h503566f_0",
+          "channel": "bioconda",
+          "download_size": "87kB"
+        },
+        {
+          "name": "perl-io-zlib",
+          "version": "1.15",
+          "build": "pl5321hdfd78af_1",
+          "channel": "bioconda",
+          "download_size": "13kB"
+        },
+        {
+          "name": "perl-json",
+          "version": "4.11",
+          "build": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "download_size": "53kB"
+        },
+        {
+          "name": "perl-json-xs",
+          "version": "4.04",
+          "build": "pl5321h9948957_0",
+          "channel": "bioconda",
+          "download_size": "71kB"
+        },
+        {
+          "name": "perl-list-moreutils",
+          "version": "0.430",
+          "build": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "download_size": "32kB"
+        },
+        {
+          "name": "perl-list-moreutils-xs",
+          "version": "0.430",
+          "build": "pl5321h7b50bb2_5",
+          "channel": "bioconda",
+          "download_size": "52kB"
+        },
+        {
+          "name": "perl-parent",
+          "version": "0.243",
+          "build": "pl5321hd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "14kB"
+        },
+        {
+          "name": "perl-pathtools",
+          "version": "3.75",
+          "build": "pl5321hb9d3cd8_2",
+          "channel": "conda-forge",
+          "download_size": "51kB"
+        },
+        {
+          "name": "perl-scalar-list-utils",
+          "version": "1.70",
+          "build": "pl5321hb03c661_0",
+          "channel": "conda-forge",
+          "download_size": "52kB"
+        },
+        {
+          "name": "perl-storable",
+          "version": "3.15",
+          "build": "pl5321hb9d3cd8_2",
+          "channel": "conda-forge",
+          "download_size": "71kB"
+        },
+        {
+          "name": "perl-types-serialiser",
+          "version": "1.01",
+          "build": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "download_size": "13kB"
+        },
+        {
+          "name": "pip",
+          "version": "25.2",
+          "build": "pyh8b19718_0",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "pixman",
+          "version": "0.46.4",
+          "build": "h54a6638_3",
+          "channel": "conda-forge",
+          "download_size": "377kB"
+        },
+        {
+          "name": "pthread-stubs",
+          "version": "0.4",
+          "build": "h7cc23a3_1004",
+          "channel": "conda-forge",
+          "download_size": "10kB"
+        },
+        {
+          "name": "pybedtools",
+          "version": "0.9.0",
+          "build": "py39hd65a603_2",
+          "channel": "bioconda",
+          "download_size": "13MB"
+        },
+        {
+          "name": "pysam",
+          "version": "0.20.0",
+          "build": "py39h9abd093_0",
+          "channel": "bioconda",
+          "download_size": "3MB"
+        },
+        {
+          "name": "python",
+          "version": "3.9.15",
+          "build": "h47a2c10_0_cpython",
+          "channel": "conda-forge",
+          "download_size": "22MB"
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.9.0.post0",
+          "build": "pyhe01879c_2",
+          "channel": "conda-forge",
+          "download_size": "233kB"
+        },
+        {
+          "name": "python-tzdata",
+          "version": "2025.2",
+          "build": "pyhd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "144kB"
+        },
+        {
+          "name": "python_abi",
+          "version": "3.9",
+          "build": "9_cp39",
+          "channel": "conda-forge",
+          "download_size": "7kB"
+        },
+        {
+          "name": "pytz",
+          "version": "2025.2",
+          "build": "pyhd8ed1ab_0",
+          "channel": "conda-forge",
+          "download_size": "189kB"
+        },
+        {
+          "name": "r-ade4",
+          "version": "1.7_22",
+          "build": "r41he1ae0d6_0",
+          "channel": "conda-forge",
+          "download_size": "5MB"
+        },
+        {
+          "name": "r-base",
+          "version": "4.1.3",
+          "build": "h2f963a2_5",
+          "channel": "conda-forge",
+          "download_size": "25MB"
+        },
+        {
+          "name": "r-bedtoolsr",
+          "version": "2.30.0.2",
+          "build": "r41hdfd78af_0",
+          "channel": "bioconda",
+          "download_size": "234kB"
+        },
+        {
+          "name": "r-lattice",
+          "version": "0.21_8",
+          "build": "r41h133d619_0",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "r-mass",
+          "version": "7.3_58.3",
+          "build": "r41h133d619_0",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "r-nlme",
+          "version": "3.1_162",
+          "build": "r41hac0b197_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "r-pixmap",
+          "version": "0.4_12",
+          "build": "r41hc72bb7e_1",
+          "channel": "conda-forge",
+          "download_size": "239kB"
+        },
+        {
+          "name": "r-rcpp",
+          "version": "1.0.10",
+          "build": "r41h38f115c_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "r-segmented",
+          "version": "1.6_4",
+          "build": "r41hc72bb7e_0",
+          "channel": "conda-forge",
+          "download_size": "799kB"
+        },
+        {
+          "name": "r-seqinr",
+          "version": "4.2_16",
+          "build": "r41h06615bd_0",
+          "channel": "conda-forge",
+          "download_size": "4MB"
+        },
+        {
+          "name": "r-sp",
+          "version": "1.6_1",
+          "build": "r41h57805ef_0",
+          "channel": "conda-forge",
+          "download_size": "2MB"
+        },
+        {
+          "name": "readline",
+          "version": "8.3",
+          "build": "hd6e31c0_1",
+          "channel": "conda-forge",
+          "download_size": "349kB"
+        },
+        {
+          "name": "rnabob",
+          "version": "2.2.1",
+          "build": "h470a237_1",
+          "channel": "bioconda",
+          "download_size": "63kB"
+        },
+        {
+          "name": "sed",
+          "version": "4.10",
+          "build": "h19d0853_0",
+          "channel": "conda-forge",
+          "download_size": "268kB"
+        },
+        {
+          "name": "setuptools",
+          "version": "80.9.0",
+          "build": "pyhff2d567_0",
+          "channel": "conda-forge",
+          "download_size": "749kB"
+        },
+        {
+          "name": "six",
+          "version": "1.17.0",
+          "build": "pyhe01879c_1",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "sysroot_linux-64",
+          "version": "2.39",
+          "build": "hc4b9eeb_6",
+          "channel": "conda-forge",
+          "download_size": "42MB"
+        },
+        {
+          "name": "tk",
+          "version": "8.6.13",
+          "build": "noxft_h4845f30_101",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "tktable",
+          "version": "2.10",
+          "build": "h8d826fa_7",
+          "channel": "conda-forge",
+          "download_size": "92kB"
+        },
+        {
+          "name": "tzdata",
+          "version": "2026c",
+          "build": "h151e31d_0",
+          "channel": "conda-forge",
+          "download_size": "119kB"
+        },
+        {
+          "name": "wget",
+          "version": "1.20.3",
+          "build": "ha56f1ee_1",
+          "channel": "conda-forge",
+          "download_size": "824kB"
+        },
+        {
+          "name": "wheel",
+          "version": "0.45.1",
+          "build": "pyhd8ed1ab_1",
+          "channel": "conda-forge",
+          "download_size": "63kB"
+        },
+        {
+          "name": "xorg-kbproto",
+          "version": "1.0.7",
+          "build": "hb9d3cd8_1003",
+          "channel": "conda-forge",
+          "download_size": "30kB"
+        },
+        {
+          "name": "xorg-libice",
+          "version": "1.0.10",
+          "build": "h7f98852_0",
+          "channel": "conda-forge",
+          "download_size": "59kB"
+        },
+        {
+          "name": "xorg-libsm",
+          "version": "1.2.3",
+          "build": "hd9c2040_1000",
+          "channel": "conda-forge",
+          "download_size": "26kB"
+        },
+        {
+          "name": "xorg-libx11",
+          "version": "1.8.4",
+          "build": "h0b41bf4_0",
+          "channel": "conda-forge",
+          "download_size": "830kB"
+        },
+        {
+          "name": "xorg-libxau",
+          "version": "1.0.12",
+          "build": "h7cc23a3_2",
+          "channel": "conda-forge",
+          "download_size": "19kB"
+        },
+        {
+          "name": "xorg-libxdmcp",
+          "version": "1.1.5",
+          "build": "h7cc23a3_2",
+          "channel": "conda-forge",
+          "download_size": "23kB"
+        },
+        {
+          "name": "xorg-libxext",
+          "version": "1.3.4",
+          "build": "h0b41bf4_2",
+          "channel": "conda-forge",
+          "download_size": "50kB"
+        },
+        {
+          "name": "xorg-libxrender",
+          "version": "0.9.10",
+          "build": "h7f98852_1003",
+          "channel": "conda-forge",
+          "download_size": "33kB"
+        },
+        {
+          "name": "xorg-libxt",
+          "version": "1.3.0",
+          "build": "hd590300_0",
+          "channel": "conda-forge",
+          "download_size": "380kB"
+        },
+        {
+          "name": "xorg-renderproto",
+          "version": "0.11.1",
+          "build": "hb9d3cd8_1003",
+          "channel": "conda-forge",
+          "download_size": "12kB"
+        },
+        {
+          "name": "xorg-xextproto",
+          "version": "7.3.0",
+          "build": "hb9d3cd8_1004",
+          "channel": "conda-forge",
+          "download_size": "31kB"
+        },
+        {
+          "name": "xorg-xproto",
+          "version": "7.0.31",
+          "build": "hb9d3cd8_1008",
+          "channel": "conda-forge",
+          "download_size": "73kB"
+        },
+        {
+          "name": "xz",
+          "version": "5.2.6",
+          "build": "h166bdaf_0",
+          "channel": "conda-forge",
+          "download_size": "418kB"
+        },
+        {
+          "name": "zlib",
+          "version": "1.2.13",
+          "build": "h4ab18f5_6",
+          "channel": "conda-forge",
+          "download_size": "93kB"
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.6",
+          "build": "ha6fb4c9_0",
+          "channel": "conda-forge",
+          "download_size": "555kB"
+        }
+      ],
+      "total_download": "590MB",
+      "log_sha256": "5cf99b15fece7fe3c201338378679141d40b3b7ed8da2f9205ad718117ea10be"
+    },
+    {
+      "environment": "qc",
+      "status": "solved_only",
+      "packages": 19,
+      "selected_packages": [
+        {
+          "name": "_openmp_mutex",
+          "version": "4.5",
+          "build": "20_gnu",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "diamond",
+          "version": "2.1.11",
+          "build": "h5ca1c30_2",
+          "channel": "bioconda",
+          "download_size": "4MB"
+        },
+        {
+          "name": "gsl",
+          "version": "2.7",
+          "build": "he838d99_0",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "hmmer",
+          "version": "3.4",
+          "build": "h7d74f8d_5",
+          "channel": "bioconda",
+          "download_size": "9MB"
+        },
+        {
+          "name": "libblas",
+          "version": "3.11.0",
+          "build": "11_h4a7cf45_openblas",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "libcblas",
+          "version": "3.11.0",
+          "build": "11_h0358290_openblas",
+          "channel": "conda-forge",
+          "download_size": "18kB"
+        },
+        {
+          "name": "libgcc",
+          "version": "16.2.0",
+          "build": "ha9f2e26_7",
+          "channel": "conda-forge",
+          "download_size": "1MB"
+        },
+        {
+          "name": "libgcc-ng",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgfortran",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgfortran-ng",
+          "version": "16.2.0",
+          "build": "h69a702a_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libgfortran5",
+          "version": "16.2.0",
+          "build": "h6b99dfc_7",
+          "channel": "conda-forge",
+          "download_size": "3MB"
+        },
+        {
+          "name": "libgomp",
+          "version": "16.2.0",
+          "build": "he0feb66_7",
+          "channel": "conda-forge",
+          "download_size": "641kB"
+        },
+        {
+          "name": "libopenblas",
+          "version": "0.3.34",
+          "build": "pthreads_hf13c14d_2",
+          "channel": "conda-forge",
+          "download_size": "7MB"
+        },
+        {
+          "name": "libstdcxx",
+          "version": "16.2.0",
+          "build": "h934c35e_7",
+          "channel": "conda-forge",
+          "download_size": "7MB"
+        },
+        {
+          "name": "libstdcxx-ng",
+          "version": "16.2.0",
+          "build": "hdf11a46_7",
+          "channel": "conda-forge",
+          "download_size": "29kB"
+        },
+        {
+          "name": "libzlib",
+          "version": "1.3.2",
+          "build": "h25fd6f3_3",
+          "channel": "conda-forge",
+          "download_size": "64kB"
+        },
+        {
+          "name": "mpi",
+          "version": "1.0",
+          "build": "openmpi",
+          "channel": "conda-forge",
+          "download_size": "4kB"
+        },
+        {
+          "name": "openmpi",
+          "version": "4.1.6",
+          "build": "hc5af2df_101",
+          "channel": "conda-forge",
+          "download_size": "4MB"
+        },
+        {
+          "name": "zlib",
+          "version": "1.3.2",
+          "build": "h25fd6f3_3",
+          "channel": "conda-forge",
+          "download_size": "96kB"
+        }
+      ],
+      "total_download": "38MB",
+      "log_sha256": "8e907be7759dc558129148d79cf84aa1a772d1420c2ba7a3ccc8dd581c107553"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "genome_sha256": "85c83b6dd6820769dae5df190adda7ca0762872d61e5634a91f1d14c8f4fd8ce",
+  "annotation_sha256": "77da8166cfd770a1d11202b6e1e4a92e4425f94cf4024476377837b768db36c3",
+  "source_evidence": {
+    "tmp\\review_v030_terminal_20261016\\packet\\terminal_review\\complete.json": "3cc43f9e883a70b5a64469e8cf5ee37050722f054f100000cc90f556e6fc49da",
+    "tmp\\review_v030_terminal_20261016\\analysis\\exploratory_endpoint_pairs_within_50kb.tsv": "dc322000857c21eb4eb51faac4f1958137bb6e44411ed8477617b9486c41c01d",
+    "tmp\\review_v030_candidates_20261016\\analysis\\native_locus_evidence.tsv": "9b404aa610722c5bfaa7ede0596baad80909c056722520e20d8bd89651accdab"
+  },
+  "loci": 15,
+  "interpretation": "Conditioned on prior terminal hits; not independent verification or sensitivity/specificity benchmark"
+}

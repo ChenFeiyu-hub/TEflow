@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "dry_run": true,
+  "actions": {
+    "LINK": [
+      {
+        "name": "pytz",
+        "version": "2026.5",
+        "build": "pyh5ded981_0",
+        "depends": [
+          "python >=3.11",
+          "python"
+        ]
+      },
+      {
+        "name": "python-tzdata",
+        "version": "2026.5",
+        "build": "pyh5ded981_0",
+        "depends": [
+          "python >=3.11",
+          "python"
+        ]
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3",
+        "build": "py311hed34c8f_2",
+        "depends": [
+          "__glibc >=2.17,<3.0.a0",
+          "libgcc >=14",
+          "libstdcxx >=14",
+          "numpy >=1.22.4",
+          "numpy >=1.23,<3",
+          "python >=3.11,<3.12.0a0",
+          "python-dateutil >=2.8.2",
+          "python-tzdata >=2022.7",
+          "python_abi 3.11.* *_cp311",
+          "pytz >=2020.1"
+        ]
+      }
+    ],
+    "UNLINK": [
+      {
+        "name": "pandas",
+        "version": "3.0.6",
+        "build": "np2py311h1e9b377_0",
+        "depends": [
+          "python",
+          "numpy >=1.26.0",
+          "python-dateutil >=2.8.2",
+          "libgcc >=15",
+          "libstdcxx >=15",
+          "__glibc >=2.17,<3.0.a0",
+          "numpy >=1.23,<3",
+          "python_abi 3.11.* *_cp311"
+        ]
+      }
+    ]
+  }
+}

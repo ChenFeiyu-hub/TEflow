@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "evidence": {
+    "families": 1,
+    "evidence": {
+      "host_protein": "executed",
+      "te_protein": "executed",
+      "pfam": "executed_standard_code_six_frames"
+    },
+    "automatic_filter": false,
+    "interpretation": "Protein similarity and domain presence are evidence, not TE/gene truth; absence is not a negative label"
+  },
+  "row": {
+    "family_id": "E1",
+    "classification": "DNA/hAT",
+    "standard_class": "TIR_MITE",
+    "tier": "te",
+    "length": "750",
+    "non_acgt_bp": "0",
+    "n_fraction": "0.0",
+    "gc_fraction": "0.6253333333333333",
+    "host_protein_hits": "1",
+    "te_protein_hits": "1",
+    "pfam_hits": "1",
+    "flags": "host_protein_similarity_review"
+  },
+  "scope": "Real DIAMOND/HMMER; single synthetic sequence and toy HMM named Pfam-A for interface testing; no Pfam biological validation"
+}

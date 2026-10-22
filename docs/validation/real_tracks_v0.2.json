@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "trf_command": [
+    "/tmp/teflow-v02-lightcheck/bin/trf"
+  ],
+  "dust_command": [
+    "/mnt/c/Users/ChenFeiyu/Documents/ChatGPT/PROPEL/tmp/pcre_tools_20260928/micromamba",
+    "run",
+    "-p",
+    "/mnt/c/Users/ChenFeiyu/Documents/ChatGPT/PROPEL/tmp/pcre_tools_20260928/env",
+    "dustmasker"
+  ],
+  "genome_bp": 900,
+  "trf_intervals": 2,
+  "dust_intervals": 1,
+  "input_sha256": "0694ef17dfe8a07cb782e138d6800893972e0b040d283343dcdd9b736c4ced6d",
+  "scope": "real executables; tiny synthetic sequence; no genome discovery benchmark"
+}

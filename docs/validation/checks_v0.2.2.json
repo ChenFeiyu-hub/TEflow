@@ -1,0 +1,31 @@
+{
+  "version": "0.2.2",
+  "date": "2026-10-15",
+  "status": "pass",
+  "source_fingerprint_linux": "e87b61486ffb92238a2b46dcf41c1e4fec845eda0588cf611078b087161fc6a6",
+  "unit_windows": {
+    "total": 62,
+    "passed": 50,
+    "skipped": 12
+  },
+  "unit_linux": {
+    "total": 62,
+    "passed": 61,
+    "skipped": 1
+  },
+  "syntax": {
+    "python": "pass",
+    "bash": "pass",
+    "documentation_bash_blocks": 3
+  },
+  "integrations": [
+    "integration_v0.2.2.json",
+    "reviewed_import_v0.2.2.json"
+  ],
+  "limitations": [
+    "Linux unit solver test not enabled: optional TEFLOW_TEST_MICROMAMBA absent.",
+    "Upstream TEAid Python interface/fork tested with a synthetic executable, not a full installed real-genome run.",
+    "User-server v0.2.2 doctor, recovery and downstream ET production execution remain pending.",
+    "No independent biological accuracy claim; original exported ORF table headers unavailable."
+  ]
+}

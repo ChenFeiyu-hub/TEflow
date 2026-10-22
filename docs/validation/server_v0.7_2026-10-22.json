@@ -1,0 +1,240 @@
+{
+  "review_date": "2026-10-22",
+  "software_version": "0.7.0rc1",
+  "source_archive_bytes": 146672,
+  "verdict": "target_server_bounded_RC_acceptance_passed",
+  "wrapper_result": {
+    "status": "RC_ACCEPTANCE_PASSED",
+    "cases": [
+      {
+        "case": "control",
+        "returncode": 0
+      },
+      {
+        "case": "parallel",
+        "returncode": 0
+      }
+    ],
+    "real_genome_analysis": false,
+    "checksum_steps": false,
+    "scope": "Synthetic scheduler/cancellation/resume/parallelism; not TE biology or hard-memory enforcement"
+  },
+  "control_checks": {
+    "status": "pass",
+    "installed": false,
+    "checks": [
+      "preview_read_only",
+      "scoped_cancellation",
+      "owned_child_cleanup",
+      "foreign_process_preserved",
+      "no_false_success",
+      "explicit_resume",
+      "completed_receipts_preserved",
+      "report_preserves_outputs",
+      "bounded_logs",
+      "feedback_includes_launches"
+    ],
+    "real_genome_analysis": false
+  },
+  "parallel_checks": {
+    "status": "pass",
+    "scope": "Synthetic three-branch actual Snakemake acceptance; not a genome performance benchmark",
+    "checks": [
+      "actual_parallel_overlap",
+      "serial_no_overlap",
+      "nonoverlapping_cpu_affinity",
+      "private_tmpdir",
+      "serial_parallel_scientific_equivalence",
+      "independent_branches_finish_after_failure",
+      "blocked_dependents_reported",
+      "no_final_success_after_failure",
+      "leases_released",
+      "offline_reevaluation_preserves_sources",
+      "audit_consensus_coordinates"
+    ]
+  },
+  "independent_event_recalculation": {
+    "serial": {
+      "completed_tool_intervals": 8,
+      "max_active_tools": 1,
+      "overlaps": []
+    },
+    "parallel": {
+      "completed_tool_intervals": 8,
+      "max_active_tools": 2,
+      "overlaps": [
+        {
+          "tools": [
+            "edta",
+            "hite"
+          ],
+          "seconds": 0.6001593861728907,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        },
+        {
+          "tools": [
+            "tetrimmer",
+            "repeatmasker"
+          ],
+          "seconds": 0.599604394286871,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        },
+        {
+          "tools": [
+            "repeatmasker",
+            "repeatmasker"
+          ],
+          "seconds": 0.5804990213364363,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        }
+      ]
+    },
+    "failure": {
+      "completed_tool_intervals": 7,
+      "max_active_tools": 2,
+      "overlaps": [
+        {
+          "tools": [
+            "edta",
+            "hite"
+          ],
+          "seconds": 0.5999861676245928,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        },
+        {
+          "tools": [
+            "trf",
+            "tetrimmer"
+          ],
+          "seconds": 0.5340064708143473,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        },
+        {
+          "tools": [
+            "repeatmasker",
+            "dustmasker"
+          ],
+          "seconds": 0.6858686879277229,
+          "cpu_sets_disjoint": true,
+          "private_tmpdirs": true
+        }
+      ]
+    }
+  },
+  "launch_receipts": [
+    {
+      "member": "control/work/control/launches/44e964b7736d4486983062f2cff56562.json",
+      "status": "succeeded",
+      "mode": "resume",
+      "target_stage": null,
+      "created": "2026-10-22T09:11:21.522892+00:00",
+      "finished": "2026-10-22T09:11:24.576298+00:00"
+    },
+    {
+      "member": "control/work/control/launches/788e3efe56094b60b7adea032e24f401.json",
+      "status": "cancelled",
+      "mode": "run",
+      "target_stage": null,
+      "created": "2026-10-22T09:11:19.422344+00:00",
+      "finished": "2026-10-22T09:11:21.264563+00:00"
+    },
+    {
+      "member": "control/work/control/launches/8e6826c2ca384636b414384ad5415d42.json",
+      "status": "succeeded",
+      "mode": "run",
+      "target_stage": "tracks",
+      "created": "2026-10-22T09:11:17.009781+00:00",
+      "finished": "2026-10-22T09:11:19.290333+00:00"
+    },
+    {
+      "member": "parallel/work/failure/launches/da3bf034b8de4f5daa9c94f661082a0b.json",
+      "status": "failed",
+      "mode": "run",
+      "target_stage": null,
+      "created": "2026-10-22T09:11:43.911946+00:00",
+      "finished": "2026-10-22T09:11:50.354284+00:00"
+    },
+    {
+      "member": "parallel/work/parallel/launches/ea36122e02cf484ca6e64c6014ea3e20.json",
+      "status": "succeeded",
+      "mode": "run",
+      "target_stage": null,
+      "created": "2026-10-22T09:11:36.370794+00:00",
+      "finished": "2026-10-22T09:11:43.834097+00:00"
+    },
+    {
+      "member": "parallel/work/serial/launches/56f6758186694b5c9d92d03ff1c6d295.json",
+      "status": "succeeded",
+      "mode": "run",
+      "target_stage": null,
+      "created": "2026-10-22T09:11:25.191704+00:00",
+      "finished": "2026-10-22T09:11:36.298045+00:00"
+    }
+  ],
+  "final_pool_lease_counts": {
+    "control/work/.teflow-runtime/pool.json": 0,
+    "parallel/work/.teflow-runtime/pool.json": 0
+  },
+  "json_members_parsed": 309,
+  "truncated_members": [],
+  "runtime_phase_counts": {
+    "complete": 47,
+    "failed": 2
+  },
+  "monitor_errors": [],
+  "expected_failure_records": [
+    {
+      "member": "control/work/control/plant/edta/failed.json",
+      "error": "Run cancellation requested; no further external command will start"
+    },
+    {
+      "member": "parallel/work/failure/fixture/hite/failed.json",
+      "error": "Command exited 1; inspect <PROJECT_ROOT>/acceptance/rc07.20261022T091116Z.292d31ff/parallel/work/failure/fixture/hite/raw.log"
+    }
+  ],
+  "independent_branch_exports_after_injected_failure": [
+    "parallel/results/failure/fixture/edta/manifest.json",
+    "parallel/results/failure/fixture/edta_tetrimmer/manifest.json"
+  ],
+  "fixture_coordinate_audit": [
+    {
+      "branch": "edta",
+      "status": "consistent"
+    },
+    {
+      "branch": "edta_tetrimmer",
+      "status": "consistent"
+    },
+    {
+      "branch": "hite",
+      "status": "consistent"
+    }
+  ],
+  "previous_report_compatibility": {
+    "version": "0.7.0rc1",
+    "run_id": "at_v06_parallel",
+    "stage_status": "complete",
+    "stage_count": 22,
+    "runtime_attempt_count": 23,
+    "export_count": 5,
+    "scope": "Read-only report over the completed 0.6 real-data run; existence and metadata checks, not a new genome execution"
+  },
+  "release_readiness": {
+    "target_server_bounded_acceptance": "passed",
+    "legacy_real_data_report_compatibility": "passed",
+    "github_actions": "not_yet_verified",
+    "github_publish": "not_performed_in_this_review"
+  },
+  "limits": [
+    "160-bp synthetic input and fake TE tools with actual Snakemake; no new biological-accuracy, real-tool cancellation, genome performance or speedup claim.",
+    "Some assertions, including foreign-process preservation and bytewise serial/parallel output equality, were executed by the server integration script; compact feedback omits full scientific artifacts and does not permit independent replay of every assertion.",
+    "Empty pools and completed launch receipts describe recorded end state, not a live server process census.",
+    "Memory remains observe_only; production hard memory enforcement and strict historical B3 remain unproven.",
+    "No manual source, upload or feedback SHA-256 acceptance was added; no real analysis was rerun and delivered RC archives were not changed."
+  ]
+}

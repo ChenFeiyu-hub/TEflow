@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - diamond=2.1.11
+  - hmmer=3.4

@@ -1,0 +1,137 @@
+{
+  "version": "0.3.1",
+  "date": "2026-10-16",
+  "unit_windows": {
+    "total": 90,
+    "passed": 78,
+    "skipped": 12
+  },
+  "unit_linux": {
+    "total": 90,
+    "passed": 89,
+    "skipped": 1,
+    "skip": "optional real micromamba"
+  },
+  "boundary_tests": 13,
+  "prior_release_130_source_files_unchanged": true,
+  "generic_genome_scheduler": {
+    "status": "pass",
+    "arbitrary_sample_id": true,
+    "annotation_required": false,
+    "promoter_outputs_present": false,
+    "alignment_registered": true,
+    "scope": "Actual scheduler, synthetic upstream tools"
+  },
+  "real_boundary": {
+    "prepared_fingerprint": "88dd94743a6f8d6b91c5b8a486fa43710a417ae35aa5a544c0e4c5c8ffb72c00",
+    "completed_fingerprint": "5e39fe54420197f1391bdaa3e3357b4221e49826f6e7506ffe96d5ebb309bf1c",
+    "extracted_bp": 203158,
+    "loci": 15,
+    "groups": 4,
+    "query_HSPs_by_mode": {
+      "dust": 125,
+      "no_dust": 157
+    },
+    "self_controls": {
+      "H0000134": 1.0,
+      "H0000139": 1.0,
+      "H0000060": 1.0,
+      "H0000025": 1.0
+    },
+    "mafft": {
+      "sequences": 7,
+      "columns": 1229
+    },
+    "commands": 16,
+    "all_exit_zero": true,
+    "command_times": [
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.092327,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/dustmasker",
+        "seconds": 0.052187,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.087791,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/dustmasker",
+        "seconds": 0.049621,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v014-py311-20261012/bin/python",
+        "seconds": 0.799252,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.099003,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.147482,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/dustmasker",
+        "seconds": 0.05799,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.143667,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.090329,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/dustmasker",
+        "seconds": 0.051749,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.15453,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.136092,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/dustmasker",
+        "seconds": 0.055973,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/blastn",
+        "seconds": 0.158529,
+        "returncode": 0
+      },
+      {
+        "command": "/tmp/teflow-v031-boundary-tools/bin/mafft",
+        "seconds": 0.058895,
+        "returncode": 0
+      }
+    ],
+    "real_tools": {
+      "blastn.version": "blastn: 2.17.0+\n Package: blast 2.17.0, build Aug 22 2026 11:52:50",
+      "dustmasker.version": "dustmasker: 1.0.0\n Package: blast 2.17.0, build Aug 22 2026 11:52:50\n Package-Config:  \n Build-Signature:  GCC_1440-ReleaseMTDLL64--x86_64-conda-linux6.8.0-gnu2.17-runnervmec1zy\n GI-64bit:  TRUE\n Build-Date:  Aug 22 2026 13:14:18\n Stable-Components-Version:  29\n Production-Version:  20250122\n Built-As:  dustmasker",
+      "mafft.version": "v7.526 (2024/Apr/26)"
+    },
+    "scope": "Bounded real DNA analysis; no heavy genome workflow, no new TE decisions or benchmark truth"
+  },
+  "limits": "No new full-genome annotation run, no accuracy benchmark, no TE acceptance/masking changes"
+}

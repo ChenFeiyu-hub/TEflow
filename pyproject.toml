@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "te-annotation-workflow"
+version = "1.0.0"
+description = "Auditable orchestration of published TE annotation tools"
+authors = [{name = "Feiyu Chen"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+engine = ["snakemake==9.27.0; sys_platform == 'linux'"]
+dev = ["build>=1.2", "twine>=6"]
+
+[project.scripts]
+teflow = "teflow.cli:main"
+teflow-runtime-check = "teflow_runtime.acceptance:main"
+
+[project.urls]
+Repository = "https://github.com/ChenFeiyu-hub/TEflow"
+Issues = "https://github.com/ChenFeiyu-hub/TEflow/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+teflow = ["validation_status.json"]

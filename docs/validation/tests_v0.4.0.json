@@ -1,0 +1,36 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-16",
+  "runtime_fingerprint": "9642ea989d17d9f04b5eaeb1b6d7567d0489a7c3f659968aeed85e2f49d0bee7",
+  "unit_tests": {
+    "windows": {
+      "total": 103,
+      "passed": 91,
+      "skipped": 12,
+      "log_sha256": "0725706e78ee657f597e8c1b6c6d717de3304f9fc0640fcd975a7ed9d2f569aa"
+    },
+    "linux": {
+      "total": 103,
+      "passed": 102,
+      "skipped": 1,
+      "log_sha256": "a6764116d8ba127a03b37ec9b45f160d00dfef4b98d1fae46dfc52c2d77536dd"
+    }
+  },
+  "integration": {
+    "public_cli_source": {
+      "status": "pass",
+      "log_sha256": "a18a64d18ad767b2f7ce4fae890523d08fb21cf5adb97aa346b1629de4d2b101"
+    },
+    "existing_branches": {
+      "status": "pass",
+      "log_sha256": "e11a63ff9b917f7d7b0f9a8491b7cb701a110b0295fe5589923a3d84df7dd9e7"
+    },
+    "installed_wheel_from_sdist_with_isolated_wrappers": {
+      "status": "pass",
+      "log_sha256": "f2fdfcefa3530feeaf318ef226b564846fb1410b5dba68f79675bb49df5d388f"
+    }
+  },
+  "scope": "Local engineering validation; real scheduler with mock upstream tools; no new genome analysis",
+  "remote_ci": "configured_not_run",
+  "server_v040_cli_fixture": "pending_user_execution"
+}

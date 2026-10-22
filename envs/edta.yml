@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - edta=2.3.0
+  # TIR-Learner 3 uses Series[0] as positional access; pandas 3 rejects it.
+  - tir-learner=3.0.7
+  - pandas=2.3.3
+  - repeatmasker=4.2.4
+  - repeatmodeler=2.0.9
+  - rmblast=2.17.0

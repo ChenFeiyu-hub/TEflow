@@ -1,0 +1,50 @@
+{
+  "version": "0.6.0",
+  "date_local": "2026-10-17",
+  "timezone": "Asia/Shanghai",
+  "status": "local_engineering_checks_passed",
+  "windows_units": {
+    "total": 155,
+    "passed": 136,
+    "skipped": 19
+  },
+  "linux_units": {
+    "total": 155,
+    "passed": 154,
+    "skipped": 1
+  },
+  "golden_graph_tool_configurations": 312,
+  "scheduler_regressions": [
+    "integration_smoke",
+    "integration_v02",
+    "integration_general_genome",
+    "integration_candidate_wrapper",
+    "integration_reviewed_import",
+    "parallel_ci4"
+  ],
+  "public_cli_source": "pass",
+  "installed_cli": "pass",
+  "installed_parallel": "pass",
+  "installed_configuration_options": "pass",
+  "source_parallel_pool_sizes": [
+    8,
+    4
+  ],
+  "installed_parallel_pool_threads": 8,
+  "server_acceptance_wrapper_local": "pass",
+  "wheel_sdist_payload_equal": true,
+  "source_upload_checksum_steps": false,
+  "downloads_during_build": false,
+  "actual_existing_rm_fragments": 138742,
+  "actual_rm_coordinate_diagnostics": 4975,
+  "target_server_v06": "pending",
+  "earlier_server_dev2_B2": "9/9 passed",
+  "earlier_server_B3": "not_proven_closing_sessions",
+  "real_genome_parallel": "not_run",
+  "production_hard_memory_limits": false,
+  "multi_species_scheduler": "deferred",
+  "remote_ci": "not_run",
+  "github_push": false,
+  "publication": false,
+  "limits": "Synthetic interfaces and old-output parsing are not new genome execution, accuracy benchmarking or a multi-day service guarantee"
+}

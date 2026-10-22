@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-22",
+  "status": "local_engineering_checks_passed",
+  "windows_units": {
+    "total": 174,
+    "passed": 148,
+    "skipped": 26
+  },
+  "linux_source_units": {
+    "total": 174,
+    "passed": 173,
+    "skipped": 1
+  },
+  "linux_installed_units": {
+    "total": 174,
+    "passed": 173,
+    "skipped": 1
+  },
+  "single_cpu_resources": {
+    "total": 11,
+    "passed": 10,
+    "skipped": 1
+  },
+  "source_scheduler_regressions": [
+    "integration_smoke",
+    "integration_v02",
+    "integration_general_genome",
+    "integration_candidate_wrapper",
+    "integration_reviewed_import",
+    "integration_cli",
+    "integration_parallel",
+    "integration_control"
+  ],
+  "installed_cli": "pass",
+  "installed_control": "pass",
+  "installed_parallel": "pass",
+  "source_release_acceptance_wrapper": "pass_local_linux",
+  "source_wheel_sdist_payload_equal": true,
+  "metadata_validation": "packaging.metadata.Metadata.from_email",
+  "downloads_during_build": false,
+  "source_upload_checksum_steps": false,
+  "target_server_v06": "five_real_branches_complete",
+  "target_server_v07": "bounded_acceptance_passed_2026-10-22",
+  "target_server_v1": "not_yet_run",
+  "github_ci": "Consult Actions for the exact uploaded commit; not inferred from these local results",
+  "production_hard_memory_limits": false,
+  "multi_species_scheduler": "deferred",
+  "strict_B3": "not_proven"
+}

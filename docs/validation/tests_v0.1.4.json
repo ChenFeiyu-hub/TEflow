@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-12",
+  "version": "0.1.4",
+  "python_tests": "3.11",
+  "linux_unit_tests": {
+    "run": 33,
+    "passed": 33,
+    "skipped": 0
+  },
+  "snakemake": "9.27.0",
+  "synthetic_dag": {
+    "tasks": 8,
+    "status": "pass"
+  },
+  "synthetic_recovery_dag": {
+    "remaining_tasks": 5,
+    "edta_recomputed": false,
+    "status": "pass"
+  },
+  "real_blast_probe": {
+    "version": "2.17.0+",
+    "synthetic_proteins": 1,
+    "build": "BLAST protein v4",
+    "status": "pass"
+  },
+  "actual_data_static_audit": {
+    "input_families": 756,
+    "retained_families": 254,
+    "clean_run_accepted": false
+  },
+  "server_v03": "pending",
+  "biological_validation": "pending",
+  "test_logs_sha256": {
+    "unit_tests.log": "2d9a3caadf404b6d01e86b2fc174f68080a756249782f8b1523260af4f79cf87",
+    "integration_smoke.log": "75511537f12b9cc087bcc0e083041b39ef19b06a46f72af76f92ecf1686697e6",
+    "integration_recovery.log": "66ea2956ea720de7f60fee2f6cc18d7e9d26aea67bf6fa661c16d0e5abdd645a"
+  }
+}

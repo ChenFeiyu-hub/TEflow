@@ -1,0 +1,44 @@
+[
+  {
+    "name": "heliano.py",
+    "url": "https://raw.githubusercontent.com/Zhenlisme/heliano/v1.3.1/heliano.py",
+    "bytes": 107821,
+    "sha256": "0f563d542ba7fd247485f3d99f07db409413aa389a8ec9b53dbb29e2e109dcc8"
+  },
+  {
+    "name": "heliano_cons.py",
+    "url": "https://raw.githubusercontent.com/Zhenlisme/heliano/v1.3.1/heliano_cons.py",
+    "bytes": 8148,
+    "sha256": "e8ab45d149915f13adcb4721461a829cbf575af2ae2a32e5546a45257e033e52"
+  },
+  {
+    "name": "heliano_configure.sh",
+    "url": "https://raw.githubusercontent.com/Zhenlisme/heliano/v1.3.1/configure.sh",
+    "bytes": 2737,
+    "sha256": "08613629b1ae8c428a1c8e505ba43119515ed33aff70bb14ecc9e65b9b409935"
+  },
+  {
+    "name": "hite_main.py",
+    "url": "https://raw.githubusercontent.com/CSU-KangHu/HiTE/v.3.3.3/main.py",
+    "bytes": 45575,
+    "sha256": "cae74d4750f4b097bc52991f8ecf5884a290cbf16fd3811ee1b199dd7add5e43"
+  },
+  {
+    "name": "hite_environment.yml",
+    "url": "https://raw.githubusercontent.com/CSU-KangHu/HiTE/v.3.3.3/environment.yml",
+    "bytes": 708,
+    "sha256": "f47336f8c791ccb1623b1f1a35ec228be327ae7867936781492044c7551bfb4d"
+  },
+  {
+    "name": "hite_configure.py",
+    "url": "https://raw.githubusercontent.com/CSU-KangHu/HiTE/v.3.3.3/configure.py",
+    "bytes": 4422,
+    "sha256": "f2b38fd9b9893fb7f86c71f6333b42e81cd46ce5004ee99c5599d95a64920b1d"
+  },
+  {
+    "name": "hite_README.md",
+    "url": "https://raw.githubusercontent.com/CSU-KangHu/HiTE/v.3.3.3/README.md",
+    "bytes": 18997,
+    "sha256": "097a20ece314f56760ac50e08d47efbb7cf6e3192ff00ac57e8ec5df2b6b3502"
+  }
+]

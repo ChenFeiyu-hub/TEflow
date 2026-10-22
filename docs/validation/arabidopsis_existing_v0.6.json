@@ -1,0 +1,71 @@
+{
+  "scope": "Actual supplied adjudicated .out files with supplied libraries; parser/length diagnostics, not source-matching proof or new genome execution",
+  "branches": [
+    {
+      "branch": "rm_edta",
+      "status": "parsed",
+      "rows": 38023,
+      "coordinates": {
+        "verified": 36550,
+        "out_of_bounds": 505,
+        "length_mismatch": 968
+      },
+      "mapping_status": {
+        "mapped": 38023
+      }
+    },
+    {
+      "branch": "rm_refined",
+      "status": "parsed",
+      "rows": 24282,
+      "coordinates": {
+        "verified": 23773,
+        "out_of_bounds": 76,
+        "length_mismatch": 433
+      },
+      "mapping_status": {
+        "mapped": 24282
+      }
+    },
+    {
+      "branch": "rm_heliano",
+      "status": "parsed",
+      "rows": 11239,
+      "coordinates": {
+        "verified": 10898,
+        "length_mismatch": 188,
+        "out_of_bounds": 153
+      },
+      "mapping_status": {
+        "mapped": 11239
+      }
+    },
+    {
+      "branch": "rm_hite",
+      "status": "parsed",
+      "rows": 22612,
+      "coordinates": {
+        "verified": 21679,
+        "length_mismatch": 728,
+        "out_of_bounds": 205
+      },
+      "mapping_status": {
+        "mapped": 22170,
+        "root_only": 442
+      }
+    },
+    {
+      "branch": "rm_edta_plus_heliano",
+      "status": "parsed",
+      "rows": 42586,
+      "coordinates": {
+        "verified": 40867,
+        "out_of_bounds": 593,
+        "length_mismatch": 1126
+      },
+      "mapping_status": {
+        "mapped": 42586
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "version": "0.2.1",
+  "date": "2026-10-14",
+  "source_fingerprint_linux": "a73d6a39c4e1723c0e4fcad45366f66080ad1a404d0e7523db2c4804db6304bd",
+  "windows_unit": {
+    "passed": 47,
+    "skipped": 8,
+    "failed": 0
+  },
+  "linux_unit": {
+    "passed": 55,
+    "skipped": 0,
+    "failed": 0
+  },
+  "synthetic_integration": {
+    "status": "pass",
+    "scheduler": "Snakemake 9.27.0",
+    "branches": 7,
+    "scope": "Synthetic tools; migration, independent exports, QC/evaluation, immutable resume"
+  },
+  "real_ninja": {
+    "status": "pass",
+    "source": "Ninja binary extracted from exact known SIF",
+    "threads": 1,
+    "rows": "0\tprobe_a\n0\tprobe_b\n0\tprobe_c\n",
+    "commands": [
+      {
+        "command": [
+          "Ninja",
+          "--in",
+          "ninja.fa",
+          "--out",
+          "ninja.clusters.tsv",
+          "--out_type",
+          "c",
+          "--corr_type",
+          "m",
+          "--cluster_cutoff",
+          "0.2",
+          "--threads",
+          "1"
+        ],
+        "rc": 0,
+        "stdout": "0\tprobe_a\n0\tprobe_b\n0\tprobe_c\nThere is 1 cluster\n",
+        "stderr": "Reading...\nCalculating distances....\n"
+      }
+    ],
+    "shell_syntax": "all scripts pass"
+  },
+  "real_sif_identity": {
+    "path": "C:\\Users\\ChenFeiyu\\Downloads\\hite_3.3.3.sif",
+    "bytes": 3674533888,
+    "sha256": "4776bd6a1c0d8797f0e1e5febe385b157fb36a5de0615b2b7f8818672de74e55",
+    "recognized": true,
+    "source": "https://zenodo.org/records/15734031",
+    "release_label": "3.3.3",
+    "reported_version": "3.3.2",
+    "version_note": "Official Zenodo image release label differs from CLI banner",
+    "source_comparison_scope": "Only main.py was compared with Git tag v.3.3.3; it differs solely in version_num. Whole-image source equivalence is not established."
+  },
+  "server_feedback": {
+    "doctor_created": "2026-10-14T10:07:39.643009+00:00",
+    "passed": 14,
+    "failed": 2,
+    "failures": [
+      "hite CLI expected 3.3.3",
+      "hite_dependencies exit 2"
+    ],
+    "dependency_error_detail": "Original hite.dependencies.log was requested; not yet received when this report was packaged",
+    "independent_confirmed_probe_bug": "0.2 searched ninja; exact image and upstream source use Ninja"
+  },
+  "limitations": [
+    "Complete real SIF dependency probe still requires server verification",
+    "No real whole-genome HiTE/HELIANO/clean-TEtrimmer benchmark completed here",
+    "main.py version-only difference does not establish whole-image source equivalence"
+  ],
+  "log_sha256": {
+    "te_v021_unit_windows.log": "2c47966363c47351a7c1830045c00ebbcf2b323706ecff1bebf7649a35740738",
+    "te_v021_unit_linux.log": "14119f33cc0049a71ac22ad4eebd47a5f1e7d42c9c7d82c80f7726bc28a29628",
+    "te_v021_integration.log": "e11a63ff9b917f7d7b0f9a8491b7cb701a110b0295fe5589923a3d84df7dd9e7",
+    "te_v021_ninja_real.json": "12e4c2f89874df16053b9dd2a41a01300610166d082c62a5c57a66e56086c21b"
+  }
+}

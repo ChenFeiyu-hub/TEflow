@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-08",
+  "scope": "Conda runtime dry runs and upstream package metadata; no runtime installation or genome execution",
+  "host": "local WSL Linux x86_64",
+  "channels": [
+    "conda-forge",
+    "bioconda"
+  ],
+  "channel_priority": "strict",
+  "local_metadata_mode": "unsharded; conda-forge cached 2026-09-28; bioconda completed 2026-10-08",
+  "environments": {
+    "tetrimmer": {
+      "status": "solve_pass",
+      "package_count": 331,
+      "standalone_blast_present": false,
+      "selected": [
+        {
+          "name": "perl",
+          "version": "5.32.1",
+          "build_string": "10_h7cc23a3_perl5",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/perl-5.32.1-10_h7cc23a3_perl5.conda",
+          "sha256": "6ab2c89273347c20144c20691f98c3721e930af38e801ec16c737d2e24406010",
+          "md5": "dfa988f7a513f0f441ba36d128b5d327"
+        },
+        {
+          "name": "python",
+          "version": "3.10.21",
+          "build_string": "h267e890_0_cpython",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/python-3.10.21-h267e890_0_cpython.conda",
+          "sha256": "a0dbc57fe7f0ffaace6708cdb813b1c0d06b9e52dd796780e0ff989f1befa86d",
+          "md5": "dcc0756cfcab6dd08cbdbda60a0bd390"
+        },
+        {
+          "name": "trf",
+          "version": "4.10.0rc2",
+          "build_string": "h7b50bb2_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/trf-4.10.0rc2-h7b50bb2_0.tar.bz2",
+          "sha256": "45eb354cd04a0a13496489544eee542d2069bb938c8135762e0d7f0e33071b82",
+          "md5": "893bfb178dba1158773c488471db16bf"
+        },
+        {
+          "name": "entrez-direct",
+          "version": "25.3",
+          "build_string": "he881be0_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/entrez-direct-25.3-he881be0_0.conda",
+          "sha256": "f499a239d4af1c73622107468ea665e6eecf12815d9bbd7a4f80ddf50bed3599",
+          "md5": "3705dffd926a633ce966a8aec3e15c0b"
+        },
+        {
+          "name": "hmmer",
+          "version": "3.4",
+          "build_string": "h7d74f8d_5",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/hmmer-3.4-h7d74f8d_5.conda",
+          "sha256": "b0ea2115beb20bbd3fe63dd8e41bfc29eab42a0c3982f91f0e018840567f37b6",
+          "md5": "7e252dc47eda3426c7a2a87122b1a3fa"
+        },
+        {
+          "name": "samtools",
+          "version": "1.24",
+          "build_string": "h9dcdb79_1",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/samtools-1.24-h9dcdb79_1.conda",
+          "sha256": "18fd604932d0fc197dcfdd54d67e7c54770a2d8eca819e03074556ed9cd3422e",
+          "md5": "9cbf5a1cbce4f7d997a4e3e2a27343f1"
+        },
+        {
+          "name": "perl-ipc-run",
+          "version": "20250809.0",
+          "build_string": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/noarch/perl-ipc-run-20250809.0-pl5321hdfd78af_0.conda",
+          "sha256": "f44082fcc13bd4242eb6bc1628473a7f158f6dfcf52f5e46349deec050e2aa05",
+          "md5": "f1092c32b516388b31320d3136a905f3"
+        },
+        {
+          "name": "perl-bioperl-core",
+          "version": "1.7.8",
+          "build_string": "pl5321hdfd78af_1",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/noarch/perl-bioperl-core-1.7.8-pl5321hdfd78af_1.tar.bz2",
+          "sha256": "144d8a545fae0c2d9cace3b0eb0c222af50e381d7a51c0aa15b30af60a499e61",
+          "md5": "e627a38fe206468089dc73a0aafb6c8c"
+        },
+        {
+          "name": "perl-moose",
+          "version": "2.2207",
+          "build_string": "pl5321hb9d3cd8_2",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/perl-moose-2.2207-pl5321hb9d3cd8_2.conda",
+          "sha256": "ac54422f368d7d5a7a55b58ed54f5b6ba8ad4b2a4b6bcf74293ed8de8e808213",
+          "md5": "ff73ab1c79d629ef1ec92090d90865f5"
+        },
+        {
+          "name": "rmblast",
+          "version": "2.17.0",
+          "build_string": "hbfc2172_1",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/rmblast-2.17.0-hbfc2172_1.conda",
+          "sha256": "1bc0134c77d9ae142af376572f324888722af06790035b97749ab62537f7b83a",
+          "md5": "4aa2f5dcd6f1cffb4b14dbc8e7937700"
+        },
+        {
+          "name": "repeatmasker",
+          "version": "4.2.4",
+          "build_string": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/noarch/repeatmasker-4.2.4-pl5321hdfd78af_0.conda",
+          "sha256": "84794a1cd3d7407ef5bf9e1115bfed7aefd27e94849df1bf20ee85a80749719a",
+          "md5": "20a288caa5c1dc00aab1c035e0c8842a"
+        },
+        {
+          "name": "repeatmodeler",
+          "version": "2.0.9",
+          "build_string": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/noarch/repeatmodeler-2.0.9-pl5321hdfd78af_0.conda",
+          "sha256": "7ca411eab6fffa6a1fee7e9b0844d848995400ce917f8bcd146b54e94d2649a6",
+          "md5": "c3c31b3e640e45fd0ed93104aed4e92b"
+        }
+      ],
+      "raw_json_sha256": "06952c083226c9f38acf0c281bacb202ad4a76b385b4ba5c663f1bb2eb0eb21b"
+    },
+    "masking": {
+      "status": "solve_pass",
+      "package_count": 96,
+      "standalone_blast_present": false,
+      "selected": [
+        {
+          "name": "perl",
+          "version": "5.32.1",
+          "build_string": "10_h7cc23a3_perl5",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/perl-5.32.1-10_h7cc23a3_perl5.conda",
+          "sha256": "6ab2c89273347c20144c20691f98c3721e930af38e801ec16c737d2e24406010",
+          "md5": "dfa988f7a513f0f441ba36d128b5d327"
+        },
+        {
+          "name": "trf",
+          "version": "4.10.0rc2",
+          "build_string": "h7b50bb2_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/trf-4.10.0rc2-h7b50bb2_0.tar.bz2",
+          "sha256": "45eb354cd04a0a13496489544eee542d2069bb938c8135762e0d7f0e33071b82",
+          "md5": "893bfb178dba1158773c488471db16bf"
+        },
+        {
+          "name": "hmmer",
+          "version": "3.4",
+          "build_string": "h7d74f8d_5",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/hmmer-3.4-h7d74f8d_5.conda",
+          "sha256": "b0ea2115beb20bbd3fe63dd8e41bfc29eab42a0c3982f91f0e018840567f37b6",
+          "md5": "7e252dc47eda3426c7a2a87122b1a3fa"
+        },
+        {
+          "name": "python",
+          "version": "3.14.7",
+          "build_string": "hcd007b5_106_cp314",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/python-3.14.7-hcd007b5_106_cp314.conda",
+          "sha256": "4cd05407d6b07d00fd5b6cc78bd2f60ae5e21f777eb26ead82be2e3751c610a1",
+          "md5": "56ee91e118243e46bfc0c41e4030d354"
+        },
+        {
+          "name": "entrez-direct",
+          "version": "25.3",
+          "build_string": "he881be0_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/entrez-direct-25.3-he881be0_0.conda",
+          "sha256": "f499a239d4af1c73622107468ea665e6eecf12815d9bbd7a4f80ddf50bed3599",
+          "md5": "3705dffd926a633ce966a8aec3e15c0b"
+        },
+        {
+          "name": "rmblast",
+          "version": "2.17.0",
+          "build_string": "hbfc2172_1",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/linux-64/rmblast-2.17.0-hbfc2172_1.conda",
+          "sha256": "1bc0134c77d9ae142af376572f324888722af06790035b97749ab62537f7b83a",
+          "md5": "4aa2f5dcd6f1cffb4b14dbc8e7937700"
+        },
+        {
+          "name": "repeatmasker",
+          "version": "4.2.4",
+          "build_string": "pl5321hdfd78af_0",
+          "channel": "bioconda",
+          "url": "https://conda.anaconda.org/bioconda/noarch/repeatmasker-4.2.4-pl5321hdfd78af_0.conda",
+          "sha256": "84794a1cd3d7407ef5bf9e1115bfed7aefd27e94849df1bf20ee85a80749719a",
+          "md5": "20a288caa5c1dc00aab1c035e0c8842a"
+        }
+      ],
+      "raw_json_sha256": "afac2845f9917c350ca05d0a93268cd58a2b49674b08b024cdf2eba3db1aad04"
+    },
+    "engine": {
+      "status": "solve_pass",
+      "package_count": 28,
+      "standalone_blast_present": false,
+      "selected": [
+        {
+          "name": "python",
+          "version": "3.11.16",
+          "build_string": "h5f976f7_2_cpython",
+          "channel": "conda-forge",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/python-3.11.16-h5f976f7_2_cpython.conda",
+          "sha256": "35375a255970809e8b0a1c744d56533f4da5339769ef5f5a24fe165ca321fcf3",
+          "md5": "1d34da7fd53578abed31372e70a7ef4e"
+        }
+      ],
+      "raw_json_sha256": "662e3df049137261c1c5de9454deb825b273d24d8a764653f0b805a6551175bc"
+    },
+    "edta": {
+      "status": "not_completed_local_resource_limit",
+      "exit_code": 134,
+      "address_space_limit_bytes": 6442450944,
+      "message": "Out of memory allocating 5435817984 bytes!",
+      "recipe_changed": false
+    }
+  },
+  "rmblast_package_inventory": {
+    "package": "linux-64/rmblast-2.17.0-hbfc2172_1.conda",
+    "url": "https://conda.anaconda.org/bioconda/linux-64/rmblast-2.17.0-hbfc2172_1.conda",
+    "metadata_bytes_fetched": 66554,
+    "index": {
+      "arch": "x86_64",
+      "build": "hbfc2172_1",
+      "build_number": 1,
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "bzip2 >=1.0.8,<2.0a0",
+        "entrez-direct >=25.3,<26.0a0",
+        "libgcc >=14",
+        "libsqlite >=3.53.3,<4.0a0",
+        "libstdcxx >=14",
+        "libzlib >=1.3.2,<2.0a0",
+        "ncbi-vdb >=3.4.1,<4.0a0",
+        "perl",
+        "perl-archive-tar",
+        "perl-json",
+        "perl-list-moreutils",
+        "zstd >=1.5.7,<1.6.0a0"
+      ],
+      "license": "OSL-2.1",
+      "name": "rmblast",
+      "platform": "linux",
+      "subdir": "linux-64",
+      "timestamp": 1784726130584,
+      "version": "2.17.0"
+    },
+    "required_files_present": [
+      "bin/rmblastn",
+      "bin/blastn",
+      "bin/blastp",
+      "bin/blastx",
+      "bin/tblastn",
+      "bin/makeblastdb",
+      "bin/blastdbcmd",
+      "bin/dustmasker"
+    ],
+    "scope": "Actual package info archive only; no binaries installed or executed."
+  }
+}

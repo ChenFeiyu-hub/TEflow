@@ -1,0 +1,59 @@
+{
+  "version": "0.7.0rc1",
+  "date": "2026-10-20",
+  "status": "local_engineering_checks_passed",
+  "windows_units": {
+    "total": 165,
+    "passed": 141,
+    "skipped": 24
+  },
+  "linux_installed_units": {
+    "total": 165,
+    "passed": 164,
+    "skipped": 1
+  },
+  "golden_graph_tool_configurations": 312,
+  "source_scheduler_regressions": [
+    "integration_smoke",
+    "integration_v02",
+    "integration_general_genome",
+    "integration_candidate_wrapper",
+    "integration_reviewed_import",
+    "integration_cli",
+    "integration_control",
+    "parallel_ci4"
+  ],
+  "installed_cli": "pass",
+  "installed_control": "pass",
+  "installed_parallel": "pass",
+  "immutable_source_server_acceptance_wrapper": "pass_local_linux",
+  "source_ci_pool_threads": 4,
+  "installed_parallel_pool_threads": 8,
+  "server_wrapper_pool_threads": 8,
+  "legacy_feedback_report_compatibility": {
+    "status": "pass",
+    "attempts": 23,
+    "legacy_initial_only_qc": 5,
+    "retained_origins": {
+      "refined_consensus": 76,
+      "original_input_low_copy": 8,
+      "original_input_fallback": 139
+    },
+    "source_archive_modified": false,
+    "full_artifact_verification": false,
+    "note": "Copied feedback views; actual server paths intentionally unavailable, so no local completion claim"
+  },
+  "wheel_sdist_payload_equal": true,
+  "downloads_during_build": false,
+  "source_upload_checksum_steps": false,
+  "target_server_v06": "five_branches_complete_and_real_RM_overlap_observed",
+  "target_server_v07": "pending_bounded_acceptance",
+  "remote_github_ci": "not_run",
+  "github_push": false,
+  "release_tag": false,
+  "publication": false,
+  "production_hard_memory_limits": false,
+  "multi_species_scheduler": "deferred",
+  "controller_crash_adoption": false,
+  "strict_B3": "not_proven_historical_result_unchanged"
+}

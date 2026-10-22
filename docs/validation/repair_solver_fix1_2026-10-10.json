@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "repair_revision": "fix1",
+  "incident": "edta-pandas-20261010T092920Z-2740035",
+  "observed_mode": "--solve-only",
+  "observed_solver_success": false,
+  "root_cause": "freeze-installed also freezes the pandas downgrade target",
+  "real_micromamba_offline_regression": {
+    "old_request": "failed as expected",
+    "corrected_request": "success",
+    "link_actions": [{"name": "pandas", "version": "2.3.3"}],
+    "installed_metadata_unchanged": true,
+    "all_commands_dry_run": true,
+    "fixture_only": true
+  },
+  "linux_tests": {"run": 20, "passed": 20, "skipped": 0},
+  "server_full_dependency_solve": "pending",
+  "server_installation": "pending"
+}

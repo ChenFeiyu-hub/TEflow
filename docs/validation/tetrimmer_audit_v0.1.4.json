@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-12",
+  "scope": "Actual user-supplied artifacts; no new genome analysis",
+  "edta_input_integrity": {
+    "library.fa": {
+      "sha256": "ddc517ce165b750da9f25bf2ed0438cfed121c923c1483cfabe52c418fcd8464",
+      "matches_server_receipt": true
+    },
+    "library.fa.provenance.tsv": {
+      "sha256": "96dc794d6c89dbf90bff4991582d0d33d1fc1346de27599409094640416d0e8c",
+      "matches_server_receipt": true
+    }
+  },
+  "audit": {
+    "input_families": 756,
+    "terminal_inputs": 756,
+    "summary_rows": 816,
+    "retained_families": 254,
+    "statuses": {
+      "skipped": 580,
+      "processed": 236
+    },
+    "evaluations": {
+      "NaN": 587,
+      "Need_check": 80,
+      "Good": 73,
+      "Perfect": 45,
+      "Need_ext": 15,
+      "Reco_check": 16
+    },
+    "retained_origins": {
+      "refined_consensus": 91,
+      "original_input_low_copy": 7,
+      "original_input_fallback": 156
+    },
+    "error_files": [
+      {
+        "path": "Multiple_sequence_alignment\\error_file.txt.tail.txt",
+        "bytes": 131072,
+        "sha256": "e106fb4da56ff4bb0af2a750f2f6cb86bb929c9f8bd91f9c45a5327183334403"
+      }
+    ],
+    "status": "quarantined",
+    "interpretation": "Summary evaluations may describe a rejected extension; retained_length describes the actual FASTA. Labels are not calibrated accuracy."
+  },
+  "rejected_label_original_fallbacks": 24,
+  "unique_processed_inputs": 176,
+  "original_error_file_bytes": 4421454,
+  "available_error_tail_bytes": 131072,
+  "error_evidence": [
+    "curl (56) timeout/reset",
+    "TE-Aid RepeatPeps.lib protein BLAST DB missing"
+  ],
+  "accepted_clean_run": false
+}

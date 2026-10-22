@@ -1,0 +1,12 @@
+include README.md LICENSE CITATION.cff CHANGELOG.md CONTRIBUTING.md pyproject.toml setup.py
+include .gitignore .gitattributes source_manifest.json MANIFEST.in
+recursive-include .github *.yml *.yaml *.md
+recursive-include src *.py
+include src/teflow/validation_status.json
+recursive-include workflow *
+recursive-include scripts *.py *.sh
+recursive-include envs *.yml *.json
+graft docs
+graft examples
+graft tests
+global-exclude __pycache__ *.py[cod]

@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "scope": "Real Snakemake with synthetic upstream outputs",
+  "checks": [
+    "reviewed_import_preserves_original_failure",
+    "known_error_retained_in_new_receipt",
+    "new_actual_producer_provenance",
+    "no_tetrimmer_rescheduling",
+    "server_entrypoint_dry_run",
+    "downstream_repeatmasker_qc_export",
+    "unchanged_completed_resume",
+    "feedback_pack"
+  ]
+}

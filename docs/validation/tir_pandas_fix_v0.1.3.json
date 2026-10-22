@@ -1,0 +1,31 @@
+{
+  "version": "0.1.3",
+  "date": "2026-10-10",
+  "server_feedback": {
+    "run_id": "at_pilot_v01",
+    "edta": "2.3.0",
+    "tir_learner": "3.0.7",
+    "pandas": "3.0.6",
+    "swifter": "1.4.0",
+    "failure": "check_TIR_TSD.py:118 family = x[0]; KeyError: 0",
+    "prepare_accepted_cds_genes": 27295,
+    "edta_complete": false,
+    "tetrimmer_started": false
+  },
+  "local_indexing_probes": [
+    {"pandas": "3.0.1", "exit_code": 1, "result": "Expected legacy integer-indexing failure reproduced"},
+    {"pandas": "2.3.3", "exit_code": 0, "result": "Same three-row indexing probe passed"}
+  ],
+  "linux_unit_tests": {"run": 19, "passed": 19, "skipped": 0},
+  "repair_shell_syntax": "pass",
+  "coverage": [
+    "doctor records incompatible indexing as failure while CLI probes pass",
+    "doctor records compatible pandas runtime evidence",
+    "solver-only repair preserves original config and lock files and never installs",
+    "unexpected solver package changes stop before installation"
+  ],
+  "server_repair_solver": "pending",
+  "server_repair_installation": "pending",
+  "full_genome_v02": "pending",
+  "scope": "Compatibility and wrapper tests only; not an end-to-end TIR-Learner or genome validation"
+}
