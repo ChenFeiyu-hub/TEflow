@@ -39,7 +39,7 @@ runpy.run_path(sys.argv[1], run_name="wrapper_import_probe")
 import teflow
 print(json.dumps({"module":teflow.__file__}))
 '''
-for script in ("run_tetrimmer_isolated.py", "prepare_teaid_database.py"):
+for script in ("run_tetrimmer_isolated.py", "prepare_teaid_database.py", "run_edta.py", "audit_tir_checkpoints.py"):
     probe = subprocess.run([sys.executable, "-I", "-S", "-c", bootstrap_probe, str(asset_path("scripts/" + script))],
                            cwd=root, env=env, capture_output=True, text=True, check=True)
     assert Path(json.loads(probe.stdout)["module"]).resolve() == Path(teflow.__file__).resolve()

@@ -24,6 +24,9 @@ STAGES = ("edta", "tetrimmer", "rm_edta", "rm_refined", "tracks", "export")
 def command(c, name):
     if name not in c["tools"]:
         raise WorkflowError("Tool configuration missing: " + name)
+    if name == "edta":
+        from .tir_backend import command as edta_command
+        return edta_command(c)
     return c["tools"][name]["command"]
 
 
@@ -83,16 +86,30 @@ def _doctor_attempt(c, output, dependency_check=False):
                 checks.append(dict(tool="edta_dependencies", status="fail", error=str(e)))
         if not c.get("fixture_only"):
             # Help/version probes never reach TIR-Learner's pandas row indexing.
-            if "edta" in required_tools(c):
+            from .tir_backend import selected as tir_selected, probe_command
+            if "edta" in required_tools(c) and tir_selected(c)["backend"] == "v4-cpu":
+                try:
+                    text = run(probe_command(c), output, output / "edta_tirlearner_cpu.log", 300)
+                    evidence = json.loads(text.strip().splitlines()[-1])
+                    if evidence.get("status") != "pass" or evidence.get("backend") != "v4-cpu":
+                        raise WorkflowError("v4 CPU model probe did not pass")
+                    checks.append(dict(tool="edta_tirlearner_cpu", **evidence))
+                except (OSError, WorkflowError, ValueError, IndexError) as e:
+                    checks.append(dict(tool="edta_tirlearner_cpu", status="fail", error=str(e)))
+            elif "edta" in required_tools(c):
                 try:
                     argv = command(c, "edta")
                     if "-p" not in argv:
                         raise WorkflowError("TIR-Learner pandas probe needs the documented micromamba command prefix")
-                    probe = Path(__file__).with_name("tirlearner_probe.py").resolve()
-                    text = run(environment_command(c, "edta") + ["python", str(probe)], output,
-                               output / "edta_tirlearner_pandas.log", 120)
+                    if tir_selected(c)["selection"] == "explicit_config":
+                        probe_argv = probe_command(c)  # Also verifies the declared v3 package version.
+                    else:
+                        probe = Path(__file__).with_name("tirlearner_probe.py").resolve()
+                        probe_argv = environment_command(c, "edta") + ["python", str(probe)]
+                    text = run(probe_argv, output, output / "edta_tirlearner_pandas.log", 120)
                     evidence = json.loads(text)
-                    if evidence.get("status") != "pass":
+                    if (evidence.get("status") != "pass" or (tir_selected(c)["selection"] == "explicit_config"
+                            and (evidence.get("backend"), evidence.get("version")) != ("v3", "3.0.7"))):
                         raise WorkflowError("TIR-Learner pandas indexing check did not pass")
                     checks.append(dict(tool="edta_tirlearner_pandas", **evidence))
                 except (OSError, WorkflowError, json.JSONDecodeError) as e:
@@ -168,6 +185,9 @@ def _doctor_attempt(c, output, dependency_check=False):
     result = dict(created=now(), checks=checks, status="pass" if all(r["status"] == "pass" for r in checks) else "fail",
                   fixture_only=bool(c.get("fixture_only")), dependencies_checked=dependency_check,
                   scope="CLI/version probes; dependency execution is a separate check; not a genome benchmark")
+    if "edta" in required_tools(c):
+        from .tir_backend import selected
+        result["tir_backend"] = selected(c)
     write_json(output / "doctor.json", result)
     if result["status"] != "pass":
         raise WorkflowError("Environment checks failed; inspect " + str(output / "doctor.json"))
@@ -347,6 +367,10 @@ def _execute(c, sid, stage, cores=None, resume=False):
                 stage_copy(prep / "host.cds.fa", folder / "host.cds.fa")
                 args += ["--cds", "host.cds.fa"]
             call("edta", args)
+            from .tir_backend import selected
+            tir = selected(c)
+            tir_outputs = []
+            details["tir_backend"] = tir
             rawlib = folder / "genome.fa.mod.EDTA.TElib.fa"
             if not list(fasta(rawlib)):
                 raise WorkflowError("EDTA produced no candidate library; no rice fallback allowed")
@@ -354,11 +378,17 @@ def _execute(c, sid, stage, cores=None, resume=False):
             expected_mod = {n: "".join(b if b in "ACGT" else "N" for b in s.upper()) for n, s in fasta(genome)}
             if (folder / "genome.fa.mod").exists() and dict(fasta(folder / "genome.fa.mod")) != expected_mod:
                 raise WorkflowError("EDTA .mod sequence differs; coordinate restoration needs inspection")
+            if tir["backend"] == "v4-cpu" and not c.get("fixture_only"):
+                from .tir_audit import audit_edta_tir
+                tir_audit, tir_outputs = audit_edta_tir(folder, tir, reference=expected_mod)
+                details["tir_audit"] = tir_audit
             for kind in ("intact", "TEanno"):
                 p = folder / ("genome.fa.mod.EDTA." + kind + ".gff3")
                 restore_gff(p, folder / (kind + ".checked.gff3"), prep)
-            details["families"] = len(canonical_library(rawlib, folder / "library.fa", "E", "EDTA-2.3.0"))
+            provider = "EDTA-2.3.0" if tir["selection"] == "legacy_config" else "EDTA-2.3.0/TIR-Learner-" + tir["version"] + ("-CPU" if tir["backend"] == "v4-cpu" else "")
+            details["families"] = len(canonical_library(rawlib, folder / "library.fa", "E", provider))
             outputs = [folder / "library.fa", folder / "library.fa.provenance.tsv", rawlib] + [folder / ("genome.fa.mod.EDTA." + k + ".gff3") for k in ("intact", "TEanno")]
+            outputs += tir_outputs
         elif stage == "tetrimmer":
             workers = rm_parallel_jobs(cores)
             upstream = folder / "upstream"

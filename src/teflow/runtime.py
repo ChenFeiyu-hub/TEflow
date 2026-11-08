@@ -221,6 +221,9 @@ def software_inventory(c):
             if not root.is_dir():
                 raise WorkflowError("Missing upstream source root: " + str(root))
             paths.update(p for p in root.rglob("*") if p.is_file() and ".git" not in p.parts and "__pycache__" not in p.parts and p.suffix not in {".pyc", ".pyo"})
+    if "edta" in required_tools(c):
+        from .tir_backend import inventory_paths
+        paths.update(inventory_paths(c))
     return {str(p): sha256(p) for p in sorted(paths)}
 
 

@@ -4,17 +4,83 @@
   "run_id": "plant_te_v01",
   "work_root": "/srv/te-project/work",
   "results_root": "/srv/te-project/results",
-  "samples": [{"id": "my_plant", "genome": "/srv/te-project/inputs/genome.fa", "exclude_seqids": []}],
-  "branches": {"edta": {"enabled": true}},
-  "tools": {
-    "edta": {"command": ["micromamba", "run", "-p", "/srv/te-project/envs/edta", "EDTA.pl"], "expected_version": "2.3.0"},
-    "repeatmasker": {"command": ["micromamba", "run", "-p", "/srv/te-project/envs/masking", "RepeatMasker"], "expected_version": "4.2.4"},
-    "trf": {"command": ["micromamba", "run", "-p", "/srv/te-project/envs/masking", "trf"], "expected_version": "4.10.0"},
-    "dustmasker": {"command": ["micromamba", "run", "-p", "/srv/te-project/envs/masking", "dustmasker"], "expected_version": "2.17.0"}
+  "samples": [
+    {
+      "id": "my_plant",
+      "genome": "/srv/te-project/inputs/genome.fa",
+      "exclude_seqids": []
+    }
+  ],
+  "branches": {
+    "edta": {
+      "enabled": true
+    }
   },
-  "execution": {"mode": "server", "threads": 32, "mem_mb": 131072},
-  "parameters": {"max_divergence": 40},
-  "databases": {"files": []},
-  "qc": {"host_proteins": null, "te_proteins": null, "pfam": false, "evalue": 1e-5},
-  "evaluation": {"promoter_analysis": false}
+  "tools": {
+    "edta": {
+      "command": [
+        "micromamba",
+        "run",
+        "-p",
+        "/srv/te-project/envs/edta",
+        "EDTA.pl"
+      ],
+      "expected_version": "2.3.0",
+      "tir_learner": {
+        "backend": "v4-cpu",
+        "version": "4.08",
+        "prefix": "/srv/te-project/envs/tirlearner4-cpu"
+      }
+    },
+    "repeatmasker": {
+      "command": [
+        "micromamba",
+        "run",
+        "-p",
+        "/srv/te-project/envs/masking",
+        "RepeatMasker"
+      ],
+      "expected_version": "4.2.4"
+    },
+    "trf": {
+      "command": [
+        "micromamba",
+        "run",
+        "-p",
+        "/srv/te-project/envs/masking",
+        "trf"
+      ],
+      "expected_version": "4.10.0"
+    },
+    "dustmasker": {
+      "command": [
+        "micromamba",
+        "run",
+        "-p",
+        "/srv/te-project/envs/masking",
+        "dustmasker"
+      ],
+      "expected_version": "2.17.0"
+    }
+  },
+  "execution": {
+    "mode": "server",
+    "threads": 32,
+    "mem_mb": 131072
+  },
+  "parameters": {
+    "max_divergence": 40
+  },
+  "databases": {
+    "files": []
+  },
+  "qc": {
+    "host_proteins": null,
+    "te_proteins": null,
+    "pfam": false,
+    "evalue": 1e-05
+  },
+  "evaluation": {
+    "promoter_analysis": false
+  }
 }

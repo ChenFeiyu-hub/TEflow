@@ -238,6 +238,8 @@ def load_config(path):
         for k in ("source_root", "lock_file", "image"):
             if t.get(k):
                 t[k] = resolve(t[k])
+    from .tir_backend import validate as validate_tir_backend
+    validate_tir_backend(c, resolve)
     if c.get("databases", {}).get("pfam_dir"):
         c["databases"]["pfam_dir"] = resolve(c["databases"]["pfam_dir"])
     for d in c.get("databases", {}).get("files", []):

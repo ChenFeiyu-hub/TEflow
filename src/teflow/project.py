@@ -76,6 +76,8 @@ def initialize(args):
     configure_v2(c, env, args.micromamba, image=args.hite_image, protein_qc=args.protein_qc, names=names)
     c["branches"] = {b: dict(enabled=b in names) for b in BRANCHES}
     c["tools"] = {k: v for k, v in c["tools"].items() if k in required_tools(c)}
+    from .tir_backend import configure, DEFAULT_BACKEND
+    configure(c, getattr(args, "tir_learner", None) or DEFAULT_BACKEND, getattr(args, "tir_env", None), env)
     apply_execution_options(c,args)
     output = args.output or root / (args.run_id + ".local.json")
     path = save_new_config(c, output)
@@ -93,6 +95,12 @@ def fork_config(args):
     c = {k: v for k, v in old.items() if not k.startswith("_")}
     c["run_id"] = args.run_id
     apply_execution_options(c,args)
+    from .tir_backend import configure, selected
+    previous_tir = selected(old)
+    if getattr(args, "tir_learner", None) is not None:
+        configure(c, args.tir_learner, getattr(args, "tir_env", None))
+    elif getattr(args, "tir_env", None):
+        raise WorkflowError("--tir-env on a fork requires an explicit --tir-learner v4-cpu")
     changes = []
     supported = {"run_tetrimmer_isolated.sh", "run_hite_container.py"}
     for provider, spec in c["tools"].items():
@@ -118,6 +126,8 @@ def fork_config(args):
                    source_sha256=sha256(args.config), config=output, config_sha256=sha256(output), wrapper_changes=changes,
                    preserved_fields="branches, parameters, QC, evaluation, inputs, databases and upstream versions; execution/exports only changed when requested",
                    outputs_imported=False, computation_launched=False)
+    receipt["tir_backend"] = dict(before=previous_tir, after=selected(c), explicitly_changed=getattr(args, "tir_learner", None) is not None)
+    receipt["preserved_fields"] = "Inputs, branches, parameters, QC, evaluation and databases; execution/exports/TIR backend only changed when requested"
     # This is an external provenance sidecar, not an extra configuration schema field.
     write_json(sidecar, receipt)
     return dict(status="configured", **receipt, receipt=str(sidecar), next="Review plan, check dependencies, and freeze as a NEW run")
@@ -126,6 +136,9 @@ def fork_config(args):
 def capabilities():
     validation = read_json(Path(__file__).with_name('validation_status.json'))
     return dict(interface_version=2, teflow_version=__version__, config_schemas=[1, 2],
+                tir_backends=dict(new_project_default="v4-cpu", versions={"v4-cpu":"4.08","v3":"3.0.7"},
+                                  legacy_config="v3", automatic_fallback=False, gpu_supported=False,
+                                  validation="TAIR10 experiment bridge passed; production adapter acceptance tracked separately"),
                 production_platform="Linux", assets=str(asset_root()),
                 profiles=PROFILES, branches={
                     b: dict(validation="arabidopsis_completed" if b in DEFAULT_BRANCHES else "fixture_only",
@@ -135,7 +148,8 @@ def capabilities():
                 library_merge="full_length_exact_or_reverse_complement_with_same_class_only",
                 automatic_branch_selection=False, heliano_official_consensus="implemented_not_genome_validated",
                 independence_definition="workflow parent dependency only; not reference-blind biological evaluation",
-                extension_contract="docs/EXTENDING.md", scientific_defaults_changed=False,
+                extension_contract="docs/EXTENDING.md", scientific_defaults_changed=True,
+                scientific_default_change="New projects use TIR-Learner 4.08 CPU; legacy configs retain v3; library/merge/mask policies unchanged",
                 branch_concurrency=dict(scope='one_species',enforcement='observe_only',default='serial',
                     server_validation=validation),
                 run_control=dict(protocol=1,cancellation='cooperative_owned_attempt',resume='explicit_unchanged_run',

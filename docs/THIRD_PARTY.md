@@ -5,6 +5,7 @@ This repository contains orchestration code only. Tool authors retain authorship
 | Component | Intended version | Primary source / citation |
 |---|---|---|
 | EDTA | 2.3.0 | [Versioned source and integrated components](https://github.com/oushujun/EDTA/tree/v2.3.0); [Ou et al., 2019](https://doi.org/10.1186/s13059-019-1905-y) |
+| TIR-Learner | 4.08 CPU default; 3.0.7 explicit backup | [Fixed v4.08 source](https://github.com/KGerhardt/TIR-Learner/tree/v4.08); [Bioconda recipe](https://github.com/bioconda/bioconda-recipes/tree/master/recipes/tir-learner) |
 | TEtrimmer | 1.7.2 | [Versioned source](https://github.com/qjiangzhao/TEtrimmer/tree/v1.7.2); [2025 paper](https://www.nature.com/articles/s41467-025-63889-y) |
 | RepeatMasker | 4.2.4 | [Official download/release notes](https://www.repeatmasker.org/RepeatMasker/); [source](https://github.com/Dfam-consortium/RepeatMasker) |
 | RepeatModeler / RepeatClassifier | 2.0.9 | [Versioned source](https://github.com/Dfam-consortium/RepeatModeler/tree/2.0.9); [Flynn et al., 2020](https://doi.org/10.1073/pnas.1921046117) |
@@ -24,6 +25,8 @@ This repository contains orchestration code only. Tool authors retain authorship
 The intended package constraints were checked against public interfaces/metadata on 2026-09-28. Full Linux environment solving, database configuration, executable compatibility and real-genome runtime remain server acceptance steps. Installed build identifiers, licenses and dependency versions are captured in the generated environment locks, and should be included in any methods supplement.
 
 EDTA already invokes additional published tools, including its LTR discovery/retrieval, TIR, Helitron, SINE, RepeatModeler and classification components. Use the actual installation manifest and EDTA documentation to cite components used by a completed run. This wrapper does not imply that TEtrimmer, HELIANO or HiTE are part of EDTA itself.
+
+The TIR-Learner 4.08 packaging audit is dated 2026-11-08. Its upstream code/model are installed separately (the reviewed source declares GPL-3.0) and are not copied into this MIT distribution. The CPU environment and its actual dependency build list are part of reproducibility; a Conda recipe is not a complete transitive lock. See [the v4 audit](UPSTREAM_TIR4_AUDIT_2026-11-08.md) for limits of the compatibility evidence and source links.
 
 TEtrimmer's main README describes releases beyond its available 1.7.2 tag/package. The adapter is intentionally tied to 1.7.2's CSV summary and final-library contract. Tag v1.7.2 resolved to commit `c16fbf669ab29f06befe57f9a7afaf013bc6cacc` during this audit. Upgrading requires new contract tests and a new run ID.
 

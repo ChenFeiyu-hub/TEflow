@@ -1,10 +1,12 @@
 # TEflow
 
-**1.0.0 · Single-species TE annotation with traceable outputs**
+**1.1.0rc1 · Single-species TE annotation with traceable outputs**
 
 TEflow runs published discovery and refinement tools, builds separate TE libraries, and annotates each library with a uniform RepeatMasker route. It exports libraries, structural candidates, fragment GFF3/BED, softmasked genomes, QC evidence and provenance for genome annotation and TE research. Expression data and pCRE are optional downstream uses.
 
-[Install](docs/INSTALL.md) · [Commands](docs/COMMANDS.md) · [Results guide](docs/RESULTS_GUIDE.md) · [1.0 changes](docs/RELEASE_v1.0.md) · [Validation](docs/TEST_STATUS_v1.0.md) · [服务器交接](docs/SERVER_v1.0_zh.md) · [Documentation index](docs/INDEX.md)
+[Install](docs/INSTALL.md) · [Commands](docs/COMMANDS.md) · [Results guide](docs/RESULTS_GUIDE.md) · [TIR v4/v3 selection](docs/TIR_BACKENDS.md) · [Validation](docs/TEST_STATUS_v1.1.md) · [服务器交接](docs/SERVER_TIR4_v1.1_zh.md) · [Documentation index](docs/INDEX.md)
+
+New projects use **TIR-Learner 4.08 on CPU**, isolated from EDTA's other dependencies. v3.0.7 remains an explicit backup; older configurations retain their previous selection. The prior TAIR10 experiment completed both versions, and [bounded target-server acceptance passed on 2026-11-08](docs/TIR4_SERVER_REVIEW_2026-11-08_zh.md). That acceptance did not repeat a whole genome through the new production adapter. A concrete v4.08 hAT/TSD filtering question remains open in the [upstream audit](docs/UPSTREAM_TIR4_AUDIT_2026-11-08.md); neither version's counts establish biological truth.
 
 ## Start with one genome
 
@@ -45,11 +47,13 @@ Combining libraries folds full-length exact or reverse-complement aliases within
 
 ## Execution and limits
 
-Execution is serial by default. Opt-in branch concurrency uses one Snakemake DAG with CPU/memory reservations, I/O slots, private temporary directories and sampled memory observations. CPU leases are disjoint within one pool. Independent work roots do **not** coordinate CPU ownership; `plan`/`run-preview` show inherited affinity, and external taskset/Slurm allocation can separate projects. Memory admission is **not a hard memory limit**. Multi-species queues, automatic controller recovery and production cgroups remain outside 1.0.
+Execution is serial by default. Opt-in branch concurrency uses one Snakemake DAG with CPU/memory reservations, I/O slots, private temporary directories and sampled memory observations. CPU leases are disjoint within one pool. Independent work roots do **not** coordinate CPU ownership; `plan`/`run-preview` show inherited affinity, and external taskset/Slurm allocation can separate projects. Memory admission is **not a hard memory limit**. Multi-species queues, automatic controller recovery and production cgroups remain outside this release.
 
-The 0.6 Arabidopsis run completed all five discovery/comparison branches with observed RepeatMasker overlap. Its E and EH classified-TE coverage was 15,016,254 and 16,409,707 bp; the net difference is about 1.39 Mb. These are aligned coverage, not confirmed novel TE truth. The 0.7 supervisor passed bounded target-server acceptance on 2026-10-22. Current 1.0 changes have their own [validation record](docs/TEST_STATUS_v1.0.md); neither fixture tests nor one plant genome establish cross-species accuracy.
+The 0.6 Arabidopsis run completed all five discovery/comparison branches with observed RepeatMasker overlap. Its E and EH classified-TE coverage was 15,016,254 and 16,409,707 bp; the net difference is about 1.39 Mb. These are aligned coverage, not confirmed novel TE truth. The 0.7 supervisor passed bounded target-server acceptance on 2026-10-22. The current TIR adapter has its own [validation record](docs/TEST_STATUS_v1.1.md); neither fixture tests nor one plant genome establish cross-species accuracy.
 
 ## Install and develop
+
+Research planning: [first-round plan for source dependencies and uncertainty / 中文](docs/research/FIRST_ROUND_2026-11-08_zh.md). This is a proposed, separately evaluated research module; probabilistic consensus is not an implemented production capability.
 
 The distribution is **te-annotation-workflow**, the CLI/import is **teflow**, and the project is **TEflow**. Python >=3.10 is required; the tested engine uses Python 3.11 and Snakemake 9.27.0. Windows supports portable audits/configuration/tests. Use source or a local wheel; no PyPI publication is assumed.
 

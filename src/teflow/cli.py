@@ -69,6 +69,8 @@ def server_config(args):
     if profile == "arabidopsis-compare" and args.sample != "arabidopsis":
         raise WorkflowError("The 0.2 comparison profile is scoped to Arabidopsis; use baseline for other samples")
     configure_v2(c, env, args.micromamba, profile, getattr(args, "hite_image", None), getattr(args, "protein_qc", False))
+    from .tir_backend import configure, DEFAULT_BACKEND
+    configure(c, getattr(args, "tir_learner", None) or DEFAULT_BACKEND, getattr(args, "tir_env", None), env)
     c["evaluation"]["promoter_analysis"] = getattr(args, "promoter_analysis", False)
     if Path(args.output).exists():
         raise WorkflowError("Refusing to overwrite configuration: " + args.output)
@@ -176,6 +178,8 @@ def main(argv=None):
         if name == "settings":
             q.add_argument("--key", choices=("threads", "mem_mb", "run_root"), required=True)
     q = sub.add_parser("init-server")
+    from .tir_backend import add_options, DEFAULT_BACKEND
+    add_options(q, DEFAULT_BACKEND)
     for k in ("root", "env-root", "data-root", "output"):
         q.add_argument("--" + k, required=True)
     q.add_argument("--mem-mb", required=True, type=int)
@@ -188,6 +192,7 @@ def main(argv=None):
     q.add_argument("--protein-qc", action="store_true")
     q.add_argument("--promoter-analysis", action="store_true", help="Optional downstream promoter/window statistics")
     q = sub.add_parser("migrate-config")
+    add_options(q)
     for name in ("config", "output", "run-id", "env-root"):
         q.add_argument("--" + name, required=True)
     q.add_argument("--micromamba", default="micromamba")
@@ -232,6 +237,11 @@ def main(argv=None):
             c = {k: v for k, v in old.items() if not k.startswith("_")}
             c["run_id"] = args.run_id
             configure_v2(c, args.env_root, args.micromamba, args.profile, args.hite_image, args.protein_qc)
+            from .tir_backend import configure
+            if args.tir_learner:
+                configure(c, args.tir_learner, args.tir_env, args.env_root)
+            elif args.tir_env:
+                raise WorkflowError("--tir-env requires an explicit --tir-learner v4-cpu")
             c["evaluation"]["promoter_analysis"] = args.promoter_analysis
             write_json(args.output, c)
             load_config(args.output)
@@ -270,7 +280,9 @@ def main(argv=None):
                 scheduler_marker(c, args.sample, args.name, work(c, args.sample) / args.name / "complete.json")
             elif args.action == "plan":
                 from .resources import resource_plan
-                result = dict(schema_version=c["schema_version"], branches=enabled(c), required_tools=sorted(required_tools(c)), dependencies=graph(c), resources=resource_plan(c), computation_launched=False)
+                from .tir_backend import selected
+                result = dict(schema_version=c["schema_version"], branches=enabled(c), required_tools=sorted(required_tools(c)), dependencies=graph(c), resources=resource_plan(c), computation_launched=False,
+                              tir_backend=selected(c) if "edta" in required_tools(c) else None)
             elif args.action == "status":
                 result = run_status(c)
             elif args.action == "unlock-stage":

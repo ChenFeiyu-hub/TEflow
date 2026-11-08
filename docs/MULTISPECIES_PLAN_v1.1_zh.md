@@ -1,5 +1,7 @@
 # TEflow 1.1 多物种开发计划
 
+2026-11-08 补记：本文保留原规划编号。当前 1.1.0rc1 优先交付 TIR-Learner v4 CPU 封装，多物种调度仍是后续工作；不能从版本号推断本文功能已经实现。当前状态见 [文档索引](INDEX.md)。
+
 日期：2026-10-23。状态：**已确定下一轮设计与验收范围；尚未实现多物种生产调度，不是 1.1 发布说明。** 当前公开执行接口仍为 1.0。本文中的 `teflow batch ...` 是拟定接口，不能当作现有命令执行。
 
 本轮测试物种为 Chlamydomonas reinhardtii、Klebsormidium nitens、Marchantia polymorpha、Arabidopsis thaliana 和 Oryza sativa。沿用已有研究中的组装、品系和注释版本，不因本次工程测试统一更换参考。数据准备见 [文件规范](MULTISPECIES_INPUTS_zh.md)，可填写 [五物种清单](../examples/multispecies/inputs.template.json)。

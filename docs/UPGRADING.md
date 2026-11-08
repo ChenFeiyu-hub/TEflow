@@ -1,5 +1,13 @@
 # Upgrade without replacing a frozen run
 
+## TIR backend change in 1.1.0rc1
+
+New `init`/`init-server` configurations default to TIR-Learner 4.08 CPU in a separate environment. Older configurations lacking `tools.edta.tir_learner` still mean v3.0.7. A plain fork or migration preserves that meaning; adopting v4 requires `--tir-learner v4-cpu --tir-env PREFIX` and a new run ID. `--tir-learner v3` is the explicit backup. The adapter never silently retries with v3.
+
+Keep the original source/configuration for frozen runs. The [current server handoff](SERVER_TIR4_v1.1_zh.md) reuses the accepted v4 environment and full experimental outputs for bounded checks; it does not import v3 outputs into a v4 stage or rerun the genome. The [upstream hAT audit](UPSTREAM_TIR4_AUDIT_2026-11-08.md) remains an open biological-method question and does not change this version-selection policy. Earlier handoff examples below describe the 1.0 release.
+
+## Prior 1.0 release
+
 1.0.0 adds explicit delivery choices, lineage reporting, completed branch publication, affinity visibility and cache/container safeguards on top of the 0.7 supervisor. Discovery parameters, branch dependencies and exact/RC same-class library merging remain unchanged. Frozen runs still require their original source. Use new run IDs for new computation; use `report` or `reevaluate` to examine completed exports without a new freeze.
 
 ## Existing completed Arabidopsis run

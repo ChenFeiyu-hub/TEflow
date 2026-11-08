@@ -1,0 +1,8 @@
+# Separate from EDTA's legacy TIR-Learner environment. CPU-only, no GPU fallback.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - tir-learner=4.08
+  - "pytorch=*=*cpu*"

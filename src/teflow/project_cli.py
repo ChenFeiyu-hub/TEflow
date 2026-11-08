@@ -18,6 +18,7 @@ def execution_options(p):
 
 
 def add_project_commands(sub):
+    from .tir_backend import add_options, DEFAULT_BACKEND
     p = sub.add_parser('select', help='Record an explicit branch/mask choice in a new delivery directory; no analysis')
     for key in ('config', 'output'): p.add_argument('--'+key, required=True)
     p.add_argument('--branch', required=True, choices=list(BRANCHES))
@@ -37,6 +38,7 @@ def add_project_commands(sub):
     p.add_argument("--exclude-seqid", action="append", help="Repeat for each exact FASTA seqid to exclude")
     p.add_argument("--protein-qc", action="store_true", help="Derive host proteins from supplied annotation/CDS")
     execution_options(p)
+    add_options(p, DEFAULT_BACKEND)
     group = p.add_mutually_exclusive_group()
     group.add_argument("--profile", choices=list(PROFILES), help="Default: baseline (E + ET)")
     group.add_argument("--branch", action="append", choices=list(BRANCHES), help="Explicit branches, including their parents; repeat flag")
@@ -69,6 +71,7 @@ def add_project_commands(sub):
     p.add_argument('--threads',type=int)
     p.add_argument('--mem-mb',type=int)
     execution_options(p)
+    add_options(p)
     for name in ('reevaluate','audit-results','runtime-status','runtime-reconcile'):
         p = sub.add_parser(name, help={'reevaluate':'Fresh offline evaluation of completed exports; no TE tools',
                                      'audit-results':'Read-only vocabulary/consensus-coordinate audit',

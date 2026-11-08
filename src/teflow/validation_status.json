@@ -1,9 +1,37 @@
 {
-  "as_of": "2026-10-22",
-  "real_genome_run": {"version": "0.6.0", "species": "Arabidopsis thaliana TAIR10", "branches": ["edta", "edta_tetrimmer", "heliano", "hite", "edta_plus_heliano"], "status": "completed"},
-  "target_server_supervisor": {"version": "0.7.0rc1", "date": "2026-10-22", "status": "bounded_acceptance_passed", "real_upstream_tools": false},
-  "current_release_checks": "See docs/TEST_STATUS_v1.0.md and GitHub Actions for the exact tested commit; historical acceptance does not certify new changes",
+  "as_of": "2026-11-08",
+  "real_genome_run": {
+    "version": "0.6.0",
+    "species": "Arabidopsis thaliana TAIR10",
+    "branches": [
+      "edta",
+      "edta_tetrimmer",
+      "heliano",
+      "hite",
+      "edta_plus_heliano"
+    ],
+    "status": "completed"
+  },
+  "target_server_supervisor": {
+    "version": "0.7.0rc1",
+    "date": "2026-10-22",
+    "status": "bounded_acceptance_passed",
+    "real_upstream_tools": false
+  },
+  "current_release_checks": "See docs/TEST_STATUS_v1.1.md; bounded production-adapter target-server acceptance passed 2026-11-08",
   "production_hard_memory_limits": false,
   "strict_logout_B3": "not_proven",
-  "cross_species_accuracy": "not_established"
+  "cross_species_accuracy": "not_established",
+  "tir_backend": {
+    "new_project_default": "v4-cpu",
+    "version": "4.08",
+    "explicit_backup": "v3/3.0.7",
+    "legacy_config": "preserve_v3",
+    "experimental_tair10_full_comparison": "completed_2026-11-07",
+    "new_production_adapter_server_acceptance": "bounded_acceptance_passed_2026-11-08",
+    "new_production_adapter_end_to_end_genome_run": "not_performed",
+    "historical_native_sequence_span_audit": "passed_679_records",
+    "biological_accuracy": "not_established",
+    "open_audit": "52 v3-only hAT sites present in initial v4 GRF candidates, absent after joint CNN/structural filtering; individual rejection cause unresolved; no upstream patch applied"
+  }
 }

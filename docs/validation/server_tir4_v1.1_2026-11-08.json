@@ -1,0 +1,122 @@
+{
+  "version": "1.1.0rc1",
+  "date": "2026-11-08",
+  "status": "review_passed",
+  "packaging_status": "TIR4_PACKAGING_ACCEPTANCE_PASSED",
+  "selected_backend": "v4-cpu",
+  "tir_version": "4.08",
+  "doctor_checks_passed": 16,
+  "command_receipts": 20,
+  "expected_help_exit_1": 2,
+  "packaging_elapsed_seconds": 72.171,
+  "cpu_model": {
+    "torch": "2.14.1",
+    "keras": "3.15.1",
+    "numpy": "2.4.6",
+    "model_input_shape": [
+      null,
+      400,
+      5
+    ],
+    "output_shape": [
+      2,
+      6
+    ],
+    "tensor_devices": [
+      "cpu"
+    ],
+    "torch_cuda_build": null
+  },
+  "historical_native_audit": {
+    "records": 679,
+    "unique_sites": 671,
+    "duplicate_site_records": 8,
+    "classes": {
+      "DTM": 430,
+      "DTT": 21,
+      "DTC": 138,
+      "DTH": 83,
+      "DTA": 7
+    },
+    "column_counts": {
+      "15": 679
+    },
+    "sequence_span_check": true
+  },
+  "checkpoint_audit_status": "AUDIT_READY",
+  "checkpoint_totals": [
+    {
+      "file": "TIRVish_json.txt.gz",
+      "total_candidates": 577,
+      "target_matches": 8
+    },
+    {
+      "file": "GRF_json.txt.gz",
+      "total_candidates": 139512,
+      "target_matches": 428
+    },
+    {
+      "file": "post_CNN_TIRVish_json.txt.gz",
+      "total_candidates": 17,
+      "target_matches": 0
+    },
+    {
+      "file": "post_CNN_GRF_json.txt.gz",
+      "total_candidates": 662,
+      "target_matches": 7
+    }
+  ],
+  "groups": {
+    "all": {
+      "sites": 59,
+      "pre_grf_exact_sites": 59,
+      "pre_either_exact_sites": 59,
+      "post_either_exact_sites": 7,
+      "post_either_any_overlap_sites": 7
+    },
+    "v3_only": {
+      "sites": 52,
+      "pre_grf_exact_sites": 52,
+      "pre_either_exact_sites": 52,
+      "post_either_exact_sites": 0,
+      "post_either_any_overlap_sites": 0
+    },
+    "shared": {
+      "sites": 5,
+      "pre_grf_exact_sites": 5,
+      "pre_either_exact_sites": 5,
+      "post_either_exact_sites": 5,
+      "post_either_any_overlap_sites": 5
+    },
+    "v4_only": {
+      "sites": 2,
+      "pre_grf_exact_sites": 2,
+      "pre_either_exact_sites": 2,
+      "post_either_exact_sites": 2,
+      "post_either_any_overlap_sites": 2
+    },
+    "priority": {
+      "sites": 11,
+      "pre_grf_exact_sites": 11,
+      "pre_either_exact_sites": 11,
+      "post_either_exact_sites": 0,
+      "post_either_any_overlap_sites": 0
+    }
+  },
+  "independent_reconciliation": {
+    "sites": 59,
+    "count_rows": 236,
+    "match_rows": 443,
+    "final_DTA_scores": 7,
+    "details_truncated": false
+  },
+  "interpretation": "All 52 v3-only hAT sites have exact GRF pre-candidates, but no overlapping post-CNN passers. CNN versus structural-filter attribution remains unresolved.",
+  "new_production_adapter_end_to_end_genome_run": false,
+  "real_whole_genome_evidence": "Prior experiment completed; this feedback is bounded packaging acceptance plus historical audit",
+  "biological_truth": "not_established",
+  "upstream_algorithm_modified": false,
+  "feedback_archives": [
+    "tir4_packaging.20261108T090734Z.2487884.feedback.tar.gz",
+    "tir4_hat_audit.20261108T091026Z.2487884.feedback.tar.gz"
+  ]
+}

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use TEflow, cite this software and the upstream methods used in your run (docs/THIRD_PARTY.md)."
 title: "TEflow: auditable TE annotation workflow"
-version: '1.0.0'
+version: '1.1.0rc1'
 repository-code: "https://github.com/ChenFeiyu-hub/TEflow"
 type: software
 license: MIT

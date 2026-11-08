@@ -1,4 +1,4 @@
-# Command interface v2 (1.0.0)
+# Command interface v2 (1.1.0rc1)
 
 The installed console entry `teflow` and `python -m teflow` are equivalent. JSON is the default for structured results; scheduler logs stream during `run`. `--help` is authoritative for arguments.
 
@@ -24,6 +24,7 @@ The installed console entry `teflow` and `python -m teflow` are equivalent. JSON
 | Write run report | `teflow report --config CONFIG --output NEW_DIRECTORY` | Markdown/JSON/TSV snapshot; outside original run, no external tools |
 | Package diagnostics | `teflow pack-feedback --config CONFIG --output FILE.tar.gz` | Bounded feedback archive; refuses overwrite |
 | Prepare an upgrade | `teflow fork-config --config OLD --output NEW --run-id NEW_RUN` | Preserves settings, rebinds known wrapper paths, writes provenance sidecar |
+| Select TIR backend | Add `--tir-learner v4-cpu --tir-env PREFIX` or `--tir-learner v3` to init/fork-config | New init defaults to v4 CPU; fork preserves the prior backend unless explicitly changed |
 | Enable branch concurrency | Add `--parallel-branches --jobs 2 --io-slots 2` to init/fork-config | One species only; stage requests, distinct CPU IDs, memory observation |
 | Inspect runtime leases | `teflow runtime-status --config CONFIG` | Read owner identity, reservations and sampled RSS |
 | Reconcile dead leases | `teflow runtime-reconcile --config CONFIG` | Remove only proven dead/quiescent records; no process signals |
@@ -39,3 +40,5 @@ Legacy `init-server`, `migrate-config`, `freeze`, `doctor`, `stage`, `targets`, 
 Current target names include `export_edta`, `export_edta_tetrimmer`, `export_heliano`, `export_hite`, `export_edta_plus_heliano`, and final `export`. Only names in `plan.dependencies` are valid for a configuration. A targeted run can be complete for that branch while overall `status` remains incomplete until final export.
 
 Core JSON configuration schemas remain 1/2. CLI `capabilities.interface_version=2` identifies this command-contract generation; it is not an export-table or configuration schema version. Existing advanced Python module functions are internal, not a promised stable SDK.
+
+The same TIR flags are supported by `init-server` and `migrate-config`. Legacy configurations without `tools.edta.tir_learner` keep v3 behavior. Select a new backend in a new run, never by editing a frozen configuration. Bounded server acceptance and optional read-only checkpoint review use `scripts/accept_tir_backend.py` and `scripts/audit_tir_checkpoints.py`; see the [server handoff](SERVER_TIR4_v1.1_zh.md).

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": "1.0.0",
-  "date": "2026-10-22",
+  "version": "1.1.0rc1",
+  "date": "2026-11-08",
   "files": {
     ".gitattributes": {
       "bytes": 110
@@ -19,22 +19,13 @@
       "bytes": 335
     },
     "CHANGELOG.md": {
-      "bytes": 17932
+      "bytes": 19505
     },
     "CITATION.cff": {
-      "bytes": 498
+      "bytes": 501
     },
     "CONTRIBUTING.md": {
       "bytes": 1529
-    },
-    "LICENSE": {
-      "bytes": 1092
-    },
-    "MANIFEST.in": {
-      "bytes": 448
-    },
-    "README.md": {
-      "bytes": 6345
     },
     "docs/ARCHITECTURE_REVIEW.md": {
       "bytes": 5130
@@ -43,7 +34,7 @@
       "bytes": 7589
     },
     "docs/COMMANDS.md": {
-      "bytes": 5818
+      "bytes": 6437
     },
     "docs/DELIVERY_v0.6_zh.md": {
       "bytes": 6227
@@ -58,7 +49,7 @@
       "bytes": 5225
     },
     "docs/GITHUB_RELEASE.md": {
-      "bytes": 2263
+      "bytes": 2916
     },
     "docs/HELIANO_STATUS_2026-10-16.md": {
       "bytes": 3796
@@ -66,14 +57,14 @@
     "docs/HITE_RECHECK_v0.2.1_zh.md": {
       "bytes": 6762
     },
+    "docs/images/workflow.svg": {
+      "bytes": 4702
+    },
     "docs/INDEX.md": {
-      "bytes": 2184
+      "bytes": 2719
     },
     "docs/INSTALL.md": {
-      "bytes": 7373
-    },
-    "docs/INSTALLATION.md": {
-      "bytes": 3647
+      "bytes": 7837
     },
     "docs/INSTALL_FIX_2026-10-08.md": {
       "bytes": 6169
@@ -81,11 +72,14 @@
     "docs/INSTALL_FIX_v0.1.2_2026-10-08.md": {
       "bytes": 4476
     },
+    "docs/INSTALLATION.md": {
+      "bytes": 3647
+    },
     "docs/MULTISPECIES_INPUTS_zh.md": {
       "bytes": 9656
     },
     "docs/MULTISPECIES_PLAN_v1.1_zh.md": {
-      "bytes": 18498
+      "bytes": 18737
     },
     "docs/PROJECTIZATION_zh.md": {
       "bytes": 4030
@@ -114,6 +108,9 @@
     "docs/REPAIR_TZDATA_FIX_2026-10-10.md": {
       "bytes": 2388
     },
+    "docs/research/FIRST_ROUND_2026-11-08_zh.md": {
+      "bytes": 23230
+    },
     "docs/RESULTS_GUIDE.md": {
       "bytes": 5638
     },
@@ -137,6 +134,9 @@
     },
     "docs/SERVER_REVIEW_v0.3_zh.md": {
       "bytes": 5561
+    },
+    "docs/SERVER_TIR4_v1.1_zh.md": {
+      "bytes": 5140
     },
     "docs/SERVER_v0.6_zh.md": {
       "bytes": 8566
@@ -183,23 +183,29 @@
     "docs/TEST_STATUS_v1.0.md": {
       "bytes": 3419
     },
+    "docs/TEST_STATUS_v1.1.md": {
+      "bytes": 5083
+    },
     "docs/TETRIMMER_RECOVERY_2026-10-12.md": {
       "bytes": 6434
     },
     "docs/THIRD_PARTY.md": {
-      "bytes": 5373
+      "bytes": 6047
+    },
+    "docs/TIR4_SERVER_REVIEW_2026-11-08_zh.md": {
+      "bytes": 7212
+    },
+    "docs/TIR_BACKENDS.md": {
+      "bytes": 5936
     },
     "docs/TIR_PANDAS_FIX_2026-10-10.md": {
       "bytes": 7037
     },
     "docs/UPGRADING.md": {
-      "bytes": 4048
+      "bytes": 4967
     },
-    "docs/VALIDATION_2026-09-28.md": {
-      "bytes": 4263
-    },
-    "docs/images/workflow.svg": {
-      "bytes": 4702
+    "docs/UPSTREAM_TIR4_AUDIT_2026-11-08.md": {
+      "bytes": 5375
     },
     "docs/validation/actual_evidence_v0.2.2.json": {
       "bytes": 1535
@@ -231,6 +237,9 @@
     "docs/validation/local_v1.0.0.json": {
       "bytes": 1412
     },
+    "docs/validation/local_v1.1.0rc1.json": {
+      "bytes": 2731
+    },
     "docs/validation/package_checks_v0.2.json": {
       "bytes": 173
     },
@@ -257,6 +266,12 @@
     },
     "docs/validation/runtime_local_v0.5.0.dev2.json": {
       "bytes": 9374
+    },
+    "docs/validation/server_tir4_hat_sites_2026-11-08.tsv": {
+      "bytes": 7547
+    },
+    "docs/validation/server_tir4_v1.1_2026-11-08.json": {
+      "bytes": 3245
     },
     "docs/validation/server_v0.6_2026-10-20.json": {
       "bytes": 1162
@@ -297,11 +312,14 @@
     "docs/validation/v0.2.1_checks.json": {
       "bytes": 2943
     },
+    "docs/VALIDATION_2026-09-28.md": {
+      "bytes": 4263
+    },
     "envs/boundary.yml": {
       "bytes": 108
     },
     "envs/edta.yml": {
-      "bytes": 249
+      "bytes": 323
     },
     "envs/engine.yml": {
       "bytes": 99
@@ -317,6 +335,9 @@
     },
     "envs/tetrimmer.yml": {
       "bytes": 1096
+    },
+    "envs/tirlearner4-cpu.yml": {
+      "bytes": 194
     },
     "envs/vendor-sources.json": {
       "bytes": 886
@@ -337,13 +358,28 @@
       "bytes": 63
     },
     "examples/general_genome.json": {
-      "bytes": 1247
+      "bytes": 1769
     },
     "examples/multispecies/inputs.template.json": {
       "bytes": 3253
     },
+    "examples/tirlearner4/hat_watchlist.tsv": {
+      "bytes": 4232
+    },
+    "examples/tirlearner4/README.md": {
+      "bytes": 1191
+    },
+    "LICENSE": {
+      "bytes": 1092
+    },
+    "MANIFEST.in": {
+      "bytes": 448
+    },
     "pyproject.toml": {
-      "bytes": 809
+      "bytes": 812
+    },
+    "README.md": {
+      "bytes": 7221
     },
     "scripts/accept_release.py": {
       "bytes": 3312
@@ -354,8 +390,14 @@
     "scripts/accept_single_species.py": {
       "bytes": 2746
     },
+    "scripts/accept_tir_backend.py": {
+      "bytes": 4027
+    },
+    "scripts/audit_tir_checkpoints.py": {
+      "bytes": 408
+    },
     "scripts/bootstrap_server.sh": {
-      "bytes": 3145
+      "bytes": 3703
     },
     "scripts/fetch_pfam.sh": {
       "bytes": 909
@@ -387,6 +429,9 @@
     "scripts/run_candidate_review.sh": {
       "bytes": 1510
     },
+    "scripts/run_edta.py": {
+      "bytes": 527
+    },
     "scripts/run_hite_container.py": {
       "bytes": 2212
     },
@@ -412,7 +457,7 @@
       "bytes": 1282
     },
     "src/teflow/__init__.py": {
-      "bytes": 77
+      "bytes": 80
     },
     "src/teflow/__main__.py": {
       "bytes": 47
@@ -448,16 +493,19 @@
       "bytes": 4352
     },
     "src/teflow/cli.py": {
-      "bytes": 21370
+      "bytes": 22072
     },
     "src/teflow/common.py": {
-      "bytes": 12009
+      "bytes": 12108
     },
     "src/teflow/control.py": {
       "bytes": 3047
     },
     "src/teflow/delivery.py": {
       "bytes": 8060
+    },
+    "src/teflow/edta_entry.py": {
+      "bytes": 10069
     },
     "src/teflow/environments.py": {
       "bytes": 390
@@ -484,10 +532,10 @@
       "bytes": 8995
     },
     "src/teflow/project.py": {
-      "bytes": 8825
+      "bytes": 10111
     },
     "src/teflow/project_cli.py": {
-      "bytes": 7655
+      "bytes": 7768
     },
     "src/teflow/publishing.py": {
       "bytes": 1554
@@ -520,10 +568,10 @@
       "bytes": 4998
     },
     "src/teflow/runtime.py": {
-      "bytes": 17172
+      "bytes": 17298
     },
     "src/teflow/stages.py": {
-      "bytes": 25722
+      "bytes": 27745
     },
     "src/teflow/teaid.py": {
       "bytes": 5476
@@ -537,6 +585,15 @@
     "src/teflow/tetrimmer_audit.py": {
       "bytes": 8805
     },
+    "src/teflow/tir_audit.py": {
+      "bytes": 6144
+    },
+    "src/teflow/tir_backend.py": {
+      "bytes": 4683
+    },
+    "src/teflow/tir_checkpoints.py": {
+      "bytes": 7763
+    },
     "src/teflow/tirlearner_probe.py": {
       "bytes": 1517
     },
@@ -547,7 +604,7 @@
       "bytes": 8006
     },
     "src/teflow/validation_status.json": {
-      "bytes": 646
+      "bytes": 1375
     },
     "src/teflow_runtime/__init__.py": {
       "bytes": 220
@@ -583,7 +640,7 @@
       "bytes": 4050
     },
     "tests/integration_cli.py": {
-      "bytes": 5905
+      "bytes": 5948
     },
     "tests/integration_control.py": {
       "bytes": 6016
@@ -675,8 +732,14 @@
     "tests/test_tetrimmer_audit.py": {
       "bytes": 3450
     },
+    "tests/test_tir_backend.py": {
+      "bytes": 14959
+    },
+    "tests/test_tir_checkpoints.py": {
+      "bytes": 2997
+    },
     "tests/test_tirlearner_probe.py": {
-      "bytes": 3671
+      "bytes": 5273
     },
     "tests/test_v02.py": {
       "bytes": 12667

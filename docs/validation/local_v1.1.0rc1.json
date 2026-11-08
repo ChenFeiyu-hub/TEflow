@@ -1,0 +1,112 @@
+{
+  "version": "1.1.0rc1",
+  "date": "2026-11-08",
+  "status": "local_packaging_checks_passed",
+  "windows_units": {
+    "total": 198,
+    "passed": 169,
+    "skipped": 29
+  },
+  "linux_source_units": {
+    "total": 198,
+    "passed": 197,
+    "skipped": 1
+  },
+  "linux_installed_units": {
+    "total": 198,
+    "passed": 197,
+    "skipped": 1
+  },
+  "linux_runtime": {
+    "source": {
+      "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+      "checks": [
+        {
+          "name": "units",
+          "status": "pass",
+          "elapsed_seconds": 36.21
+        },
+        {
+          "name": "integration_cli",
+          "status": "pass",
+          "elapsed_seconds": 41.03
+        },
+        {
+          "name": "integration_control",
+          "status": "pass",
+          "elapsed_seconds": 35.09
+        },
+        {
+          "name": "integration_parallel",
+          "status": "pass",
+          "elapsed_seconds": 102.59
+        }
+      ]
+    },
+    "wheel": {
+      "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+      "checks": [
+        {
+          "name": "units",
+          "status": "pass",
+          "elapsed_seconds": 8.03
+        },
+        {
+          "name": "integration_cli",
+          "status": "pass",
+          "elapsed_seconds": 8.38
+        },
+        {
+          "name": "integration_control",
+          "status": "pass",
+          "elapsed_seconds": 7.71
+        },
+        {
+          "name": "integration_parallel",
+          "status": "pass",
+          "elapsed_seconds": 24.69
+        }
+      ]
+    }
+  },
+  "snakemake": "9.27.0",
+  "scope": "Mock upstream tools, actual Linux subprocesses and scheduler. Not a new genome analysis.",
+  "native_parser_real_feedback": {
+    "status": "pass",
+    "records": 679,
+    "unique_sites": 671,
+    "duplicate_site_records": 8,
+    "bases": 1291226,
+    "classes": {
+      "DTM": 430,
+      "DTT": 21,
+      "DTC": 138,
+      "DTH": 83,
+      "DTA": 7
+    },
+    "column_counts": {
+      "15": 679
+    },
+    "sequence_span_check": false,
+    "zero_candidates": false,
+    "annotation_contract": "native_extended_table_not_standard_GFF3",
+    "score_labels": [
+      "DTA",
+      "DTC",
+      "DTH",
+      "DTM",
+      "DTT",
+      "NonTIR"
+    ],
+    "score_scale": 10000,
+    "score_calibration": "not_established",
+    "all_labels_among_highest_score": true
+  },
+  "target_server_production_adapter_acceptance": "pending",
+  "upstream_full_genome_experiment": "TAIR10 v3/v4 completed 2026-11-07; distinct experimental bridge",
+  "gpu_support": false,
+  "upstream_biological_filter_changes": false,
+  "cross_species_accuracy": "not_established",
+  "github_push_performed": false,
+  "remote_ci": "not_run_by_this_task"
+}

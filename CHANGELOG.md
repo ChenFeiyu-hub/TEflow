@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0rc1 — 2026-11-08
+
+- Default new projects to isolated TIR-Learner 4.08 CPU; keep EDTA 2.3.0 and its v3.0.7 environment as an explicit fallback. Legacy configurations and plain forks retain their selection. No automatic fallback or GPU support.
+- Add an attempt-local EDTA/TIR bridge, package/model identity, actual CPU inference probes and discovery-call receipts. Resolve the real EDTA Perl source without modifying installed dispatchers.
+- Preserve v4's 15-column native annotation, six uncalibrated scores and duplicate records; check sequence spans and require a successful actual discovery call before accepting EDTA results.
+- Add bounded acceptance using existing environments/results and a read-only checkpoint audit for 59 TAIR10 hAT review sites. Document the upstream DTA/TSD pattern question without changing upstream code or treating v3 as ground truth.
+- Keep single-species scheduling and library/export policies. The previously proposed multi-species milestone remains future work; this version number does not imply that scheduler is implemented.
+- Record completed experimental TAIR10 execution, local source/wheel tests and bounded target-server packaging acceptance (16 checks, 679 historical native records). A new whole-genome execution through the production adapter remains unperformed.
+- Synchronize GitHub-source capability metadata with the subsequent server acceptance and explicitly report the new-project TIR default change. Add the first-round dependency/uncertainty research plan as a proposal, not a production inference feature.
+
 ## 1.0.0 — 2026-10-22
 
 - First single-species public interface release; keeps 0.7 discovery parameters, merge rules and masking defaults.

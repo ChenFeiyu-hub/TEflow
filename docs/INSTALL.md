@@ -1,6 +1,6 @@
-# Installation and first project (1.0.0)
+# Installation and first project (1.1.0rc1)
 
-Existing installations can use a separate source directory and their current engine: follow [the 1.0 server handoff](SERVER_v1.0_zh.md). No tool/database reinstall or old genome rerun is required for the bounded engineering acceptance. Source/upload checksum validation is not a required step; download installers retain their checks.
+Existing installations can use a separate source directory and their current engine: follow [the v4 server handoff](SERVER_TIR4_v1.1_zh.md). Reuse a verified v4 CPU environment with `--tir-env`, or install it separately; the existing EDTA environment is retained. Bounded engineering acceptance does not require an old genome rerun. Source/upload checksum validation is not a required step; download installers retain their checks.
 
 Production uses Linux. Windows supports input auditing, configuration and portable tests. Python >=3.10 is required for the wrapper; the tested engine uses Python 3.11 and Snakemake 9.27.0. Upstream software, genomes, databases and containers are installed separately and are not included in the Python package.
 
@@ -12,16 +12,18 @@ Use an unpacked release or a Git checkout. Keep the installation and work paths 
 export MICROMAMBA=/absolute/path/to/micromamba
 TASK_ROOT=/absolute/path/to/te_project
 TE_ENV="$TASK_ROOT/envs"
-TE_REPO=/absolute/path/to/TEflow-1.0.0
+TE_REPO=/absolute/path/to/TEflow-1.1.0rc1
 cd "$TE_REPO"
 
 # Solves only; it does not test pip dependencies or run the tools.
 bash scripts/bootstrap_server.sh "$TE_ENV" --solve-only
-# Installs the baseline engine, EDTA, TEtrimmer and masking environments.
+# Installs engine, EDTA (with backup v3), isolated TIR v4 CPU, TEtrimmer and masking.
 bash scripts/bootstrap_server.sh "$TE_ENV"
 ```
 
 The installer refuses to overwrite existing environments. Existing verified installations should follow [UPGRADING.md](UPGRADING.md); they do not need a fresh tool installation. Installation logs and explicit package lists are saved under the environment root. HELIANO and protein QC are optional: add `--only heliano` or `--only qc` to the solve/install calls only when enabling those features. HiTE additionally requires Apptainer and the verified SIF described in [HITE_RECHECK_v0.2.1_zh.md](HITE_RECHECK_v0.2.1_zh.md).
+
+The default TIR backend is v4.08 CPU. `--only tirlearner4-cpu` provisions only its isolated environment. To deliberately use v3 alone, add `--tir-learner v3` to both the bootstrap and project initialization commands. There is no automatic algorithm fallback or GPU installation. See [TIR backend contracts and the open hAT audit](TIR_BACKENDS.md).
 
 For wrapper-only installation into an existing compatible Python environment:
 

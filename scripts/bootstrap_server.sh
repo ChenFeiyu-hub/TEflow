@@ -2,20 +2,32 @@
 # Deliberately server-only and opt-in. No genome computation occurs here.
 set -euo pipefail
 repo=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
-prefix=${1:?Usage: bash scripts/bootstrap_server.sh /absolute/env-root [--solve-only] [--only engine|edta|tetrimmer|masking|heliano|qc]}
+prefix=${1:?Usage: bash scripts/bootstrap_server.sh /absolute/env-root [--solve-only] [--only engine|edta|tirlearner4-cpu|tetrimmer|masking|heliano|qc] [--tir-learner v4-cpu|v3]}
 shift
 mode=install
-names=(engine edta tetrimmer masking)
+names=(engine edta tirlearner4-cpu tetrimmer masking)
+backend=v4-cpu
+only=""
 while (( $# )); do
   case "$1" in
     --solve-only) mode=--solve-only; shift ;;
     --only)
       [[ $# -ge 2 ]] || { echo "--only requires an environment name" >&2; exit 2; }
-      case "$2" in engine|edta|tetrimmer|masking|heliano|qc) names=("$2") ;; *) echo "Unknown environment: $2" >&2; exit 2 ;; esac
+      case "$2" in engine|edta|tirlearner4-cpu|tetrimmer|masking|heliano|qc) only="$2" ;; *) echo "Unknown environment: $2" >&2; exit 2 ;; esac
+      shift 2 ;;
+    --tir-learner)
+      [[ $# -ge 2 ]] || { echo "--tir-learner requires v4-cpu or v3" >&2; exit 2; }
+      case "$2" in v4-cpu|v3) backend="$2" ;; *) echo "Unknown TIR backend: $2" >&2; exit 2 ;; esac
       shift 2 ;;
     *) echo "Unknown argument: $1" >&2; exit 2 ;;
   esac
 done
+if [[ -n "$only" ]]; then
+  [[ "$only" != tirlearner4-cpu || "$backend" == v4-cpu ]] || { echo "Conflicting TIR installation options" >&2; exit 2; }
+  names=("$only")
+elif [[ "$backend" == v3 ]]; then
+  names=(engine edta tetrimmer masking)
+fi
 mamba=${MICROMAMBA:-micromamba}
 [[ $(uname -s) == Linux ]] || { echo "Linux server required" >&2; exit 2; }
 [[ "$prefix" == /* && "$prefix" != *" "* ]] || { echo "Use an absolute prefix without spaces" >&2; exit 2; }
